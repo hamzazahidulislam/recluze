@@ -1,3 +1,4 @@
+- ### Applied data analysis | Applied data science | machine learning
 ## Probability / Stats for Computer Science 20 - Higher Dimensions, Contour Plots, Dependence (Urdu)
   - 1 How to visualize a 3D plot. | Professional 3D Plotting in Matplotlib
   - 2 How to convert a 3D plot into a Contour Plot in Jupyter Notebook. | Contour Plots in Matplotlib - Visualize 3D Functions in 2D
