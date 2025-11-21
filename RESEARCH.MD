@@ -1,6 +1,6 @@
 # Read the Base paper or the Survey paper.
 # FIND RA, TA.
-# First publish Review Paper.
+# First publish Review Paper. and follow the Prisma guideline with a systematic review.
 # Workshop for publication
 # Databases for journals
 # Global top x problem in x field 
