@@ -10,4 +10,3 @@
 ## [JSTOR](www.jstor.org)
 ## [SSRN](https://papers.ssrn.com/)
 ## [MITACS](https://www.mitacs.ca/)
-## Thesis structured based on your degree example: Bachelor of Science, Masters, Phd   
