@@ -8,3 +8,4 @@
 ## make keyword = ["cloud","security","aws"], ["cloud","security","ai","aws"], ["cloud","security","machine-learning","aws"],  ["machine-learning","security","cloud"], ["ai","security","cloud"]
 
 allintitle: "cloud-security" filetype:pdf
+allintitle: "cloud-security" site:.edu ext:pdf
