@@ -5,4 +5,5 @@
 ## world funding agencies for scientific research
 ## [QUERY=COUNTRY_NAME] funding agencies for scientific research
 ## security in cloud
-## make keyword = ["cloud","security","aws"], ["cloud","security","ai","aws"], ["cloud","security","machine-learning","aws"]
+## make keyword = ["cloud","security","aws"], ["cloud","security","ai","aws"], ["cloud","security","machine-learning","aws"],  ["machine-learning","security","cloud"], ["ai","security","cloud"]
+
