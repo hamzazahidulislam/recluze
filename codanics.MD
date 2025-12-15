@@ -23,3 +23,8 @@ allintitle: "cloud-security" site:.edu ext:pdf
 [https://paperpal.com/](https://paperpal.com/)
 
 [https://researcher.life/](https://researcher.life/)
+
+[https://harpa.ai/](https://harpa.ai/)
+
+
+
