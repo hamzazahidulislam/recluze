@@ -10,4 +10,4 @@
 allintitle: "cloud-security" filetype:pdf
 allintitle: "cloud-security" site:.edu ext:pdf
 
-(scite)[https://scite.ai/]
+[https://scite.ai/](https://scite.ai/)
