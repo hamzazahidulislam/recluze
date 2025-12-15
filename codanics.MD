@@ -48,3 +48,13 @@ allintitle: "cloud-security" site:.edu ext:pdf
 [https://www.sciencedirect.com/](https://www.sciencedirect.com/)
 
 ### End mention by sabbir ahmed
+
+systematic review vs meta analysis vs literature review
+
+systematic review vs meta analysis vs narrative review
+
+systematic review vs meta analysis vs meta synthesis
+
+systematic review vs meta analysis vs scoping review
+
+systematic review and meta analysis qualitative or quantitative
