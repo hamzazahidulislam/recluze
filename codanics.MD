@@ -11,3 +11,15 @@ allintitle: "cloud-security" filetype:pdf
 allintitle: "cloud-security" site:.edu ext:pdf
 
 [https://scite.ai/](https://scite.ai/)
+
+[https://www.scinapse.io/](https://www.scinapse.io/)
+
+[https://scispace.com/](https://scispace.com/)
+
+[https://www.researchrabbit.ai/](https://www.researchrabbit.ai/)
+
+[https://www.connectedpapers.com/](https://www.connectedpapers.com/)
+
+[https://paperpal.com/](https://paperpal.com/)
+
+[https://researcher.life/](https://researcher.life/)
