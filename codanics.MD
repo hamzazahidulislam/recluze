@@ -26,5 +26,25 @@ allintitle: "cloud-security" site:.edu ext:pdf
 
 [https://harpa.ai/](https://harpa.ai/)
 
+### This is mention by sabbir ahmed
+[https://access.clarivate.com/](https://access.clarivate.com/)
 
+[https://www.elsevier.com/products/scopus](https://www.elsevier.com/products/scopus)
 
+[https://www.scopus.com/](https://www.scopus.com/)
+
+[https://www.scimagojr.com/](https://www.scimagojr.com/)
+
+[https://www.predatoryjournals.org/the-list](https://www.predatoryjournals.org/the-list)
+
+[https://beallslist.net/standalone-journals/](https://beallslist.net/standalone-journals/)
+
+[https://libgen.ac/](https://libgen.ac/)
+
+[sci-hub](sci-hub)
+
+[https://scholar.google.com/](https://scholar.google.com/)
+
+[https://www.sciencedirect.com/](https://www.sciencedirect.com/)
+
+### End mention by sabbir ahmed
