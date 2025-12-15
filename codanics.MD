@@ -63,3 +63,6 @@ systematic review and meta analysis qualitative or quantitative
 How to get subject-wise scientific research databases
 
 list of academic research databases for computer science
+
+[https://www.cochrane.org/](https://www.cochrane.org/) RCT vs Cohort study
+
