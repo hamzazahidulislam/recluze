@@ -66,3 +66,4 @@ list of academic research databases for computer science
 
 [https://www.cochrane.org/](https://www.cochrane.org/) RCT vs Cohort study
 
+newcastle ottawa scale
