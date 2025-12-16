@@ -69,3 +69,6 @@ list of academic research databases for computer science
 newcastle ottawa scale
 
 chesk risk of bias 
+
+Find big names in your field or subject area!
+
