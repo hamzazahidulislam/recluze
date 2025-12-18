@@ -84,3 +84,4 @@ https://www.upwork.com/freelance-jobs/research-papers/
 
 Question? 
 Answer?
+[How to strcutured paper](https://youtu.be/klkmWfBbeVw?list=PL9XvIvvVL50FfbyuZQjpF8zcTB7HWROYY&t=9977) 
