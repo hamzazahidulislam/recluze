@@ -85,3 +85,5 @@ https://www.upwork.com/freelance-jobs/research-papers/
 Question? 
 Answer?
 [How to strcutured paper](https://youtu.be/klkmWfBbeVw?list=PL9XvIvvVL50FfbyuZQjpF8zcTB7HWROYY&t=9977) 
+
+Times New Roman: The gold standard and most widely accepted font for academic writing across many style guides (APA, MLA, IEEE).
