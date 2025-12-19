@@ -90,15 +90,11 @@ Times New Roman: The gold standard and most widely accepted font for academic wr
 
 line space, font size
 
-1 Reducing greenhouse gasses emission in agriculture: A review
-2
-Keywords: Methane; CO2; .......... This should be only 5
-3 Abstract
-4
-Introduction
-5
-Body
-6 Conclusion
-7
-Future Outlook
-8 References
+## 1 Reducing greenhouse gasses emission in agriculture: A review
+## 2 Keywords: Methane; CO2; .......... This should be only 5
+## 3 Abstract
+## 4 Introduction
+## 5 Body
+## 6 Conclusion
+## 7 Future Outlook
+## 8 References
