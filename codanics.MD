@@ -110,3 +110,7 @@ Check data authenticity
 Do we need Scientific Writing Trainings?
 
 data analysis
+
+world's top 10 problems
+
+[https://www.un.org/en/global-issues](https://www.un.org/en/global-issues)
