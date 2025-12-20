@@ -114,3 +114,11 @@ data analysis
 world's top 10 problems
 
 [https://www.un.org/en/global-issues](https://www.un.org/en/global-issues)
+
+[http://canva.com/](http://canva.com/)
+
+[https://www.biorender.com/](https://www.biorender.com/)
+
+[https://mindthegraph.com/](https://mindthegraph.com/)
+
+Data forecasting with R AND Python
