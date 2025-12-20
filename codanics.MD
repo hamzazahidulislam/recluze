@@ -121,4 +121,4 @@ world's top 10 problems
 
 [https://mindthegraph.com/](https://mindthegraph.com/)
 
-Data forecasting with R AND Python
+Data forecasting with R AND Python no coding tool power bi
