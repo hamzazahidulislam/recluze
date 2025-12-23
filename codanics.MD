@@ -135,3 +135,5 @@ Data forecasting with R AND Python no coding tool power bi
 count economic loss
 
 https://inciteful.xyz/
+
+[https://endnote.com/](https://endnote.com/)
