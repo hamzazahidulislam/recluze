@@ -141,3 +141,5 @@ https://inciteful.xyz/
 https://www.mdpi.com/
 
 [https://www.perplexity.ai/](https://www.perplexity.ai/)
+
+[https://clarivate.com/](https://clarivate.com/)
