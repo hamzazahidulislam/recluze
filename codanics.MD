@@ -139,3 +139,5 @@ https://inciteful.xyz/
 [https://endnote.com/](https://endnote.com/)
 
 https://www.mdpi.com/
+
+[https://www.perplexity.ai/](https://www.perplexity.ai/)
