@@ -148,6 +148,7 @@ https://www.mdpi.com/
 
 https://www.dimensions.ai/
 
+# Make a database from these results
 
 ## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
