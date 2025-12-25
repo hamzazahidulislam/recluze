@@ -156,6 +156,8 @@ https://www.dimensions.ai/
 
 ## Download scopus result filter [Dcoment type = Book chapter, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
+## filter date range 2015-2026
+
 ##Abstruct & keyword check in to `word cloud` ==> Generating Word Cloud in Python
 
 ## This will help to write a systematic review.
