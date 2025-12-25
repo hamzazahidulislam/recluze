@@ -149,9 +149,9 @@ https://www.mdpi.com/
 https://www.dimensions.ai/
 
 
-## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]
+## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
-## Download scopus result filter [Dcoment type = review, language = eng], select type [all information, export type = csv & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]
+## Download scopus result filter [Dcoment type = review, language = eng], select type [all information, export type = csv & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
 ##Abstruct & keyword check in to `word cloud` ==> Generating Word Cloud in Python
 
