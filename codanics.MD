@@ -147,3 +147,12 @@ https://www.mdpi.com/
 [https://pubmed.ncbi.nlm.nih.gov/](https://pubmed.ncbi.nlm.nih.gov/)
 
 https://www.dimensions.ai/
+
+
+## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv & save as preferrence ]
+
+## Download scopus result filter [Dcoment type = review, language = eng], select type [all information, export type = csv & save as preferrence ]
+
+##Abstruct & keyword check in to `word cloud` ==> Generating Word Cloud in Python
+
+## If your paper has an impact factor of more than 10. You will be eligible for a postdoc that pays more than a professor's wage. In China.
