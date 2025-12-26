@@ -1,11 +1,20 @@
-## Thesis structured based on your degree example: Bachelor of Science, Master's, Phd   
+<!-- @format -->
+
+## Thesis structured based on your degree example: Bachelor of Science, Master's, Phd
+
 ## What is a narrative review article, and how is a narrative article structured?
+
 ## What is the Systematic review article structured?
-##  What is a research paper structured?
+
+## What is a research paper structured?
+
 ## world funding agencies for scientific research
+
 ## [QUERY=COUNTRY_NAME] funding agencies for scientific research
+
 ## security in cloud
-## make keyword = ["cloud","security","aws"], ["cloud","security","ai","aws"], ["cloud","security","machine-learning","aws"],  ["machine-learning","security","cloud"], ["ai","security","cloud"]
+
+## make keyword = ["cloud","security","aws"], ["cloud","security","ai","aws"], ["cloud","security","machine-learning","aws"], ["machine-learning","security","cloud"], ["ai","security","cloud"]
 
 allintitle: "cloud-security" filetype:pdf
 allintitle: "cloud-security" site:.edu ext:pdf
@@ -27,6 +36,7 @@ allintitle: "cloud-security" site:.edu ext:pdf
 [https://harpa.ai/](https://harpa.ai/)
 
 ### This is mention by sabbir ahmed
+
 [https://access.clarivate.com/](https://access.clarivate.com/)
 
 [https://www.elsevier.com/products/scopus](https://www.elsevier.com/products/scopus)
@@ -59,7 +69,6 @@ systematic review vs meta analysis vs scoping review
 
 systematic review and meta analysis qualitative or quantitative
 
-
 How to get subject-wise scientific research databases
 
 list of academic research databases for computer science
@@ -68,7 +77,7 @@ list of academic research databases for computer science
 
 newcastle ottawa scale
 
-chesk risk of bias 
+chesk risk of bias
 
 Find big names in your field or subject area!
 
@@ -82,22 +91,30 @@ One paragraph for acknowledgment
 
 https://www.upwork.com/freelance-jobs/research-papers/
 
-Question? 
+Question?
 Answer?
-[How to strcutured paper](https://youtu.be/klkmWfBbeVw?list=PL9XvIvvVL50FfbyuZQjpF8zcTB7HWROYY&t=9977) 
+[How to strcutured paper](https://youtu.be/klkmWfBbeVw?list=PL9XvIvvVL50FfbyuZQjpF8zcTB7HWROYY&t=9977)
 
 Times New Roman: The gold standard and most widely accepted font for academic writing across many style guides (APA, MLA, IEEE).
 
 line space, font size
 
 ## 1 Reducing greenhouse gasses emission in agriculture: A review
+
 ## 2 Keywords: Methane; CO2; .......... This should be only 5
+
 ## 3 Abstract
+
 ## 4 Introduction
+
 ## 5 Body
+
 ## 6 Conclusion
+
 ## 7 Future Outlook
+
 ## 8 References
+
 ## 9 Acknowledgement
 
 transition words
@@ -150,11 +167,11 @@ https://www.dimensions.ai/
 
 # Make a database from these results
 
-## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
+## Download scopus result filter [Dcoment type = artcile, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
-## Download scopus result filter [Dcoment type = review, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
+## Download scopus result filter [Dcoment type = review, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
-## Download scopus result filter [Dcoment type = Book chapter, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother  export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
+## Download scopus result filter [Dcoment type = Book chapter, language = eng], select type [all information, export type = csv or execl & save as preferrence ], onother export type [all information, refrence manager ==> RIS (RefWorks), BibTex]. And check if the export limit is, then paginate the list to download.
 
 ## filter date range 2015-2026
 
@@ -186,3 +203,4 @@ https://www.dimensions.ai/
 
 [https://www.wiley.com/](https://www.wiley.com/)
 
+## every year i publish three review article. before doing systematic review we must retrieve scientific databases then we are replicate that process again for meta analysis.
