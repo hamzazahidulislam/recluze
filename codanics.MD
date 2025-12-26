@@ -167,3 +167,5 @@ https://www.dimensions.ai/
 ## If your paper has an impact factor of more than 10. You will be eligible for a postdoc that pays more than a professor's wage. In China.
 
 ## China and Saudi Arabia author they're hot audience for you.
+
+## You will be able to sell your scientific writing as a service on Upwork.
