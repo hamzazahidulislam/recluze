@@ -206,3 +206,13 @@ https://www.dimensions.ai/
 ## every year i publish three review article. before doing systematic review we must retrieve scientific databases then we are replicate that process again for meta analysis.
 
 ## Check if EndNote can be provided freely by your university?
+
+## Folder structure
+
+- ## 00_Meta_analysis or 00_Systemetic_analysis or 00_Book_chapter_analysis
+- ## endnote_library
+  - ## Download pdf
+- ## raw_references
+  - ## save RIS FILE_NAME=01_WOS_articles or 01_WOS_review or 01_WOS_book_chapter
+  - ## create database[DATE].FILE
+    - ## `add query and date and total result and add filter`
