@@ -227,3 +227,5 @@ https://www.dimensions.ai/
 - ## Reading in Progress _Yellow_ Not Decided
 - ## Still need to Read _Red_ Excluded
 - ## Group for Research _Purple_
+
+- ## You have to make your own library for writing your research paper.
