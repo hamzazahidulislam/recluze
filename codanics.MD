@@ -175,3 +175,8 @@ https://www.dimensions.ai/
 [https://www.science.org/doi/10.1126/science.334.6061.1344](https://www.science.org/doi/10.1126/science.334.6061.1344)
 
 [https://datavysts.eu/](https://datavysts.eu/)
+
+# Publishers
+
+[https://www.mdpi.com/](https://www.mdpi.com/)
+
