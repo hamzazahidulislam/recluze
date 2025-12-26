@@ -223,7 +223,7 @@ https://www.dimensions.ai/
 
 ## Tag
 
-- ## Reading Finished *Green*
-- ## Reading in Progress *Yellow*
-- ## Still need to Read *Red*
-- ## Group for Research *Purple*
+- ## Reading Finished _Green_ Included
+- ## Reading in Progress _Yellow_ Not Decided
+- ## Still need to Read _Red_ Excluded
+- ## Group for Research _Purple_
