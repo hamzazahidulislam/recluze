@@ -218,3 +218,5 @@ https://www.dimensions.ai/
     - ## `add query and date and total result and add filter`
 
 ## connect EndNote with your university network through VPN
+
+## PDF TITLE ==> Author + Year + Title
