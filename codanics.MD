@@ -181,3 +181,5 @@ https://www.dimensions.ai/
 [https://www.mdpi.com/](https://www.mdpi.com/)
 
 [https://www.springernature.com](https://www.springernature.com/gp)
+
+[https://www.elsevier.com/](https://www.elsevier.com/)
