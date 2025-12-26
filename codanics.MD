@@ -220,3 +220,9 @@ https://www.dimensions.ai/
 ## connect EndNote with your university network through VPN
 
 ## PDF TITLE ==> Author + Year + Title
+
+## Tag
+
+- ## Reading Finished *Green*
+- ## Reading in Progress *Yellow*
+- ## Still need to Read *Red*
