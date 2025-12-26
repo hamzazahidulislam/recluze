@@ -216,3 +216,5 @@ https://www.dimensions.ai/
   - ## save RIS FILE_NAME=01_WOS_articles or 01_WOS_review or 01_WOS_book_chapter
   - ## create database[DATE].FILE
     - ## `add query and date and total result and add filter`
+
+## connect EndNote with your university network through VPN
