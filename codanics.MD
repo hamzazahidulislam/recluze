@@ -169,3 +169,5 @@ https://www.dimensions.ai/
 ## China and Saudi Arabia author they're hot audience for you.
 
 ## You will be able to sell your scientific writing as a service on Upwork.
+
+[https://www.nature.com/articles/d41586-023-01523-x](https://www.nature.com/articles/d41586-023-01523-x)
