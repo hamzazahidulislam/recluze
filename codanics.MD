@@ -232,4 +232,4 @@ https://www.dimensions.ai/
 
 - ## Find and remove duplicates from your library
 
-- ## PRISMA Literature Review (Flow Chart & Example)
+- ## [PRISMA Literature Review Flow Chart & Example](https://www.youtube.com/watch?v=KeKpVgydlAQ)
