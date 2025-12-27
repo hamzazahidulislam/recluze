@@ -235,3 +235,5 @@ https://www.dimensions.ai/
 - ## [PRISMA Literature Review Flow Chart & Example](https://www.youtube.com/watch?v=KeKpVgydlAQ)
 
 - # 30% upto 40% duplicate files
+
+- # Before writing a meta-analysis, you must read a review paper first.
