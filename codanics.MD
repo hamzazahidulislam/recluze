@@ -207,7 +207,7 @@ https://www.dimensions.ai/
 
 ## Check if EndNote can be provided freely by your university?
 
-## Folder structure
+## Folder structure --> manuscript
 
 - ## 00_Meta_analysis or 00_Systemetic_analysis or 00_Book_chapter_analysis
 - ## endnote_library
@@ -216,6 +216,8 @@ https://www.dimensions.ai/
   - ## save RIS FILE_NAME=01_WOS_articles or 01_WOS_review or 01_WOS_book_chapter
   - ## create database[DATE].FILE
     - ## `add query and date and total result and add filter`
+- ## artcile_witheout_duplicates
+- ## Endnote_archived_full_library
 
 ## connect EndNote with your university network through VPN
 
