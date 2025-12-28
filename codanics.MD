@@ -247,3 +247,5 @@ https://www.dimensions.ai/
 - ## When you reference the final, then you will be able edit the review title.
 
 - ## Science of the Total Environment citation style
+
+- ## You will get money if you complete the EndNote ETL project.
