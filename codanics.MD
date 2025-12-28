@@ -245,3 +245,5 @@ https://www.dimensions.ai/
 - ## Add tags after removing duplicate files.
 
 - ## When you reference the final, then you will be able edit the review title.
+
+- ## Science of the Total Environment citation style
