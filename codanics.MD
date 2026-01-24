@@ -239,7 +239,6 @@ https://www.dimensions.ai/
 - # 30% upto 40% duplicate files
 
 - # Before writing a meta-analysis, you must read a review paper first.
-
   - ## For meta-analysis, you must set criteria XYZ, then you will read the abstractions of the _review article_, and based on the criteria, you include and exclude review articles.
 
 - ## After your Postdoc, when you write your project article, you don't need to follow citation guideline.
@@ -259,3 +258,5 @@ https://www.dimensions.ai/
 ## Institutional Review Board
 
 ## Research project or Research group
+
+## [Writing a Good Research Title: Things to Avoid](https://www.enago.com/academy/writing-a-good-research-title-things-to-avoid/)
