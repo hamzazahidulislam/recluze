@@ -262,3 +262,11 @@ https://www.dimensions.ai/
 ## [Writing a Good Research Title: Things to Avoid](https://www.enago.com/academy/writing-a-good-research-title-things-to-avoid/)
 
 [https://journalfinder.elsevier.com/](https://journalfinder.elsevier.com/)
+
+[https://www.wiley.com/en-sg/journal-finder/abstract/](https://www.wiley.com/en-sg/journal-finder/abstract/)
+
+[https://www.mdpi.com/about/journalfinder](https://www.mdpi.com/about/journalfinder)
+
+[https://researcher.life/journal](https://researcher.life/journal)
+
+## exclude (MDPI, frontiersin)
