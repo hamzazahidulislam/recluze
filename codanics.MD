@@ -260,3 +260,5 @@ https://www.dimensions.ai/
 ## Research project or Research group
 
 ## [Writing a Good Research Title: Things to Avoid](https://www.enago.com/academy/writing-a-good-research-title-things-to-avoid/)
+
+[https://journalfinder.elsevier.com/](https://journalfinder.elsevier.com/)
