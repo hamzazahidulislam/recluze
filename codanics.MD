@@ -269,4 +269,8 @@ https://www.dimensions.ai/
 
 [https://researcher.life/journal](https://researcher.life/journal)
 
+[https://link.springer.com/journals](https://link.springer.com/journals)
+
 ## exclude (MDPI, frontiersin)
+
+[https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/](https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/)
