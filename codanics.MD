@@ -273,6 +273,6 @@ https://www.dimensions.ai/
 
 [https://link.springer.com/journals](https://link.springer.com/journals)
 
-## exclude (MDPI, frontiersin)
+## exclude (MDPI, frontiersin, plos)
 
 [https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/](https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/)
