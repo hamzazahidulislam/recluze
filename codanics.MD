@@ -298,3 +298,5 @@ https://www.dimensions.ai/
 ## [https://unpaywall.org/](https://unpaywall.org/)
 
 ## [https://openaccessbutton.vercel.app/](https://openaccessbutton.vercel.app/)
+
+## [https://doaj.org/](https://doaj.org/)
