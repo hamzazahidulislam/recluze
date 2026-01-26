@@ -25,6 +25,8 @@ allintitle: "cloud-security" site:.edu ext:pdf
 
 [https://scispace.com/](https://scispace.com/)
 
+[https://www.perplexity.ai/](https://www.perplexity.ai/)
+
 [https://www.researchrabbit.ai/](https://www.researchrabbit.ai/)
 
 [https://www.connectedpapers.com/](https://www.connectedpapers.com/)
