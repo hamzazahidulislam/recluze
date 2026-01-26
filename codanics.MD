@@ -25,8 +25,6 @@ allintitle: "cloud-security" site:.edu ext:pdf
 
 [https://scispace.com/](https://scispace.com/)
 
-[https://www.perplexity.ai/](https://www.perplexity.ai/)
-
 [https://www.researchrabbit.ai/](https://www.researchrabbit.ai/)
 
 [https://www.connectedpapers.com/](https://www.connectedpapers.com/)
@@ -278,3 +276,19 @@ https://www.dimensions.ai/
 ## exclude (MDPI, frontiersin, plos)
 
 [https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/](https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-suggester/)
+
+[https://www.perplexity.ai/](https://www.perplexity.ai/)
+
+[https://poe.com/](https://poe.com/)
+
+[https://paperpal.com/](https://paperpal.com/)
+
+[https://scispace.com/](https://scispace.com/)
+
+[[https://researcher.life/](https://researcher.life/)](<[https://researcher.life/](https://researcher.life/)>)
+
+## [https://shadowlibraries.github.io/DirectDownloads/AnnasArchive/](https://shadowlibraries.github.io/DirectDownloads/AnnasArchive/)
+
+## sci-hub
+
+## [libgen.ac](https://libgen.ac/)
