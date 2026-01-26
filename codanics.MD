@@ -294,3 +294,5 @@ https://www.dimensions.ai/
 ## [libgen.ac](https://libgen.ac/)
 
 ## https://z-lib.id/
+
+## [https://unpaywall.org/](https://unpaywall.org/)
