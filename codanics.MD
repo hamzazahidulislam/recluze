@@ -302,3 +302,5 @@ https://www.dimensions.ai/
 ## [https://doaj.org/](https://doaj.org/)
 
 ## [https://openalex.org/](https://openalex.org/)
+
+## [https://www.semanticscholar.org/](https://www.semanticscholar.org/)
