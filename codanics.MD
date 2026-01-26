@@ -300,3 +300,5 @@ https://www.dimensions.ai/
 ## [https://openaccessbutton.vercel.app/](https://openaccessbutton.vercel.app/)
 
 ## [https://doaj.org/](https://doaj.org/)
+
+## [https://openalex.org/](https://openalex.org/)
