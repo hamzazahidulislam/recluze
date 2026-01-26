@@ -304,3 +304,5 @@ https://www.dimensions.ai/
 ## [https://openalex.org/](https://openalex.org/)
 
 ## [https://www.semanticscholar.org/](https://www.semanticscholar.org/)
+
+## [https://elicit.com/](https://elicit.com/)
