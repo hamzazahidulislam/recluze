@@ -292,3 +292,5 @@ https://www.dimensions.ai/
 ## sci-hub
 
 ## [libgen.ac](https://libgen.ac/)
+
+## https://z-lib.id/
