@@ -200,3 +200,34 @@ A **Surrogate Endpoint** is an outcome measure that is used as a proxy for a cli
 ---
 
 > "The first principle is that you must not fool yourself—and you are the easiest person to fool." — Richard Feynman
+
+[https://codanics.com/measurement-bias/](https://codanics.com/measurement-bias/)
+
+---
+
+# Measurement Bias (Systematic Error)
+
+Measurement bias is a systematic flaw in the data collection process that consistently distorts the measurement of a variable.
+
+## Key Types
+1. **Instrumental:** Faulty equipment (e.g., uncalibrated sensors).
+2. **Respondent:** Participants lying to look better (Social Desirability).
+3. **Observer:** The researcher sees what they want to see.
+4. **Proxy:** Using a poor surrogate (e.g., using "hours spent in gym" as a proxy for "actual calories burned").
+
+---
+
+## The "Bullseye" Visualization
+* **Low Bias + Low Random Error:** Hits the center of the target every time.
+* **High Bias + Low Random Error:** Hits a tight cluster, but far away from the center (Reliably Wrong).
+* **Low Bias + High Random Error:** Scattered all over the target, but the average is the center.
+
+---
+
+## Prevention Strategies
+- [ ] **Calibration:** Regularly test equipment against a known standard.
+- [ ] **Blinding:** Use double-blind studies so researchers don't know which group is which.
+- [ ] **Anonymity:** Ensure surveys are anonymous to reduce social desirability bias.
+- [ ] **Standard Operating Procedures (SOPs):** Use strict scripts and protocols for all data collectors.
+
+---
