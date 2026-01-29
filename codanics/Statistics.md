@@ -157,3 +157,46 @@ A **Surrogate Endpoint** is an outcome measure that is used as a proxy for a cli
 ## Key Risks
 
 > **Warning:** A surrogate endpoint is only useful if it is **validated**. If a drug improves the surrogate but doesn't improve the patient's life or lifespan, the trial is considered a failure in a clinical sense.
+
+---
+
+# Bias in Data: Statistical Overview
+
+**Bias** is a systematic distortion in data that leads to inaccurate conclusions. In statistics, it is the difference between the "Expected Value" of an estimator and the "True Value" of the parameter being studied.
+
+---
+
+## Common Types of Bias
+
+### 1. Selection Bias
+
+- **Definition:** The sample is not representative of the population.
+- **Example:** Sampling only daytime shoppers to represent all consumers.
+
+### 2. Recall Bias
+
+- **Definition:** Participants do not remember past events accurately.
+- **Example:** Asking people what they ate exactly three weeks ago.
+
+### 3. Non-Response Bias
+
+- **Definition:** When people who choose _not_ to respond have different characteristics than those who do.
+- **Example:** An employee satisfaction survey where unhappy employees are too afraid to participate.
+
+### 4. Exclusion Bias
+
+- **Definition:** Systematically excluding certain groups from the dataset.
+- **Example:** A clinical trial that excludes elderly patients but applies the drug to all ages.
+
+---
+
+## How to Mitigate Bias
+
+- [ ] **Random Sampling:** Ensure every member of a population has an equal chance of being selected.
+- [ ] **Blind Studies:** Prevent researchers or participants from knowing which group is the control.
+- [ ] **Data Auditing:** Regularly check datasets for under-represented groups.
+- [ ] **Clear Definitions:** Use objective, standardized measurements to reduce human error.
+
+---
+
+> "The first principle is that you must not fool yourself—and you are the easiest person to fool." — Richard Feynman
