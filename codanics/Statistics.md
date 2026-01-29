@@ -121,3 +121,39 @@ This document provides an overview of **Triangulation** in research and statisti
 ---
 
 _Created for the Research Methods documentation project._
+
+---
+
+# Surrogate Endpoints in Statistics
+
+A **Surrogate Endpoint** is an outcome measure that is used as a proxy for a clinically meaningful endpoint.
+
+## Definition
+
+- **Clinical Endpoint:** Reflects a patient's feelings, functions, or survival (e.g., "Did the patient live?").
+- **Surrogate Endpoint:** A biomarker intended to substitute for a clinical endpoint (e.g., "Did their blood sugar drop?").
+
+---
+
+## Comparison Table
+
+| Feature       | Clinical Endpoint          | Surrogate Endpoint           |
+| :------------ | :------------------------- | :--------------------------- |
+| **Goal**      | Direct measure of benefit  | Indirect measure of benefit  |
+| **Timeframe** | Long-term                  | Short-term                   |
+| **Ease**      | Difficult/Expensive        | Easy/Cheaper                 |
+| **Accuracy**  | High (The "Gold Standard") | Variable (Must be validated) |
+
+---
+
+## Common Examples
+
+1. **Cardiovascular:** Using _Blood Pressure_ as a surrogate for _Stroke/Heart Attack_.
+2. **Oncology:** Using _Progression-Free Survival (PFS)_ as a surrogate for _Overall Survival (OS)_.
+3. **Diabetes:** Using _HbA1c levels_ as a surrogate for _Microvascular complications_.
+
+---
+
+## Key Risks
+
+> **Warning:** A surrogate endpoint is only useful if it is **validated**. If a drug improves the surrogate but doesn't improve the patient's life or lifespan, the trial is considered a failure in a clinical sense.
