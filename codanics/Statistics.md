@@ -231,3 +231,43 @@ Measurement bias is a systematic flaw in the data collection process that consis
 - [ ] **Standard Operating Procedures (SOPs):** Use strict scripts and protocols for all data collectors.
 
 ---
+
+[https://codanics.com/data-analysis-and-types-of-data-analysis/](https://codanics.com/data-analysis-and-types-of-data-analysis/)
+---
+
+# Data Analysis and Its Four Types
+
+Data Analysis is the systematic application of statistical and logical techniques to describe, illustrate, and evaluate data.
+
+## The Maturity Model
+
+### 📊 1. Descriptive Analysis
+> **Goal:** Summarize what occurred.
+* **Metric:** "How many units did we sell?"
+* **Key Tools:** Dashboards, Pie Charts, Tables.
+
+### 🔍 2. Diagnostic Analysis
+> **Goal:** Understand the "why."
+* **Metric:** "Why did our website traffic drop last Tuesday?"
+* **Key Tools:** Correlation, Probability, Regression.
+
+### 🔮 3. Predictive Analysis
+> **Goal:** Forecast future trends.
+* **Metric:** "Which customers are likely to cancel their subscription next month?"
+* **Key Tools:** Machine Learning, Trend Lines.
+
+### 💡 4. Prescriptive Analysis
+> **Goal:** Determine the best path forward.
+* **Metric:** "What is the optimal delivery route to save fuel?"
+* **Key Tools:** Optimization Algorithms, AI Simulations.
+
+---
+
+## Analysis Workflow
+1. **Data Requirements:** Define what you are measuring.
+2. **Data Collection:** Gathering info from various sources.
+3. **Data Cleaning:** Removing "garbage" data (outliers/errors).
+4. **Data Analysis:** Applying the types listed above.
+5. **Visualization:** Turning numbers into charts for stakeholders.
+
+---
