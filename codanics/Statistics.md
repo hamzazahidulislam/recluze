@@ -271,3 +271,7 @@ Data Analysis is the systematic application of statistical and logical technique
 5. **Visualization:** Turning numbers into charts for stakeholders.
 
 ---
+
+[https://codanics.com/population-vs-sample/](https://codanics.com/population-vs-sample/)
+
+---
