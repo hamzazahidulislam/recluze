@@ -210,6 +210,7 @@ A **Surrogate Endpoint** is an outcome measure that is used as a proxy for a cli
 Measurement bias is a systematic flaw in the data collection process that consistently distorts the measurement of a variable.
 
 ## Key Types
+
 1. **Instrumental:** Faulty equipment (e.g., uncalibrated sensors).
 2. **Respondent:** Participants lying to look better (Social Desirability).
 3. **Observer:** The researcher sees what they want to see.
@@ -218,13 +219,15 @@ Measurement bias is a systematic flaw in the data collection process that consis
 ---
 
 ## The "Bullseye" Visualization
-* **Low Bias + Low Random Error:** Hits the center of the target every time.
-* **High Bias + Low Random Error:** Hits a tight cluster, but far away from the center (Reliably Wrong).
-* **Low Bias + High Random Error:** Scattered all over the target, but the average is the center.
+
+- **Low Bias + Low Random Error:** Hits the center of the target every time.
+- **High Bias + Low Random Error:** Hits a tight cluster, but far away from the center (Reliably Wrong).
+- **Low Bias + High Random Error:** Scattered all over the target, but the average is the center.
 
 ---
 
 ## Prevention Strategies
+
 - [ ] **Calibration:** Regularly test equipment against a known standard.
 - [ ] **Blinding:** Use double-blind studies so researchers don't know which group is which.
 - [ ] **Anonymity:** Ensure surveys are anonymous to reduce social desirability bias.
@@ -232,8 +235,7 @@ Measurement bias is a systematic flaw in the data collection process that consis
 
 ---
 
-[https://codanics.com/data-analysis-and-types-of-data-analysis/](https://codanics.com/data-analysis-and-types-of-data-analysis/)
----
+## [https://codanics.com/data-analysis-and-types-of-data-analysis/](https://codanics.com/data-analysis-and-types-of-data-analysis/)
 
 # Data Analysis and Its Four Types
 
@@ -242,28 +244,37 @@ Data Analysis is the systematic application of statistical and logical technique
 ## The Maturity Model
 
 ### 📊 1. Descriptive Analysis
+
 > **Goal:** Summarize what occurred.
-* **Metric:** "How many units did we sell?"
-* **Key Tools:** Dashboards, Pie Charts, Tables.
+
+- **Metric:** "How many units did we sell?"
+- **Key Tools:** Dashboards, Pie Charts, Tables.
 
 ### 🔍 2. Diagnostic Analysis
+
 > **Goal:** Understand the "why."
-* **Metric:** "Why did our website traffic drop last Tuesday?"
-* **Key Tools:** Correlation, Probability, Regression.
+
+- **Metric:** "Why did our website traffic drop last Tuesday?"
+- **Key Tools:** Correlation, Probability, Regression.
 
 ### 🔮 3. Predictive Analysis
+
 > **Goal:** Forecast future trends.
-* **Metric:** "Which customers are likely to cancel their subscription next month?"
-* **Key Tools:** Machine Learning, Trend Lines.
+
+- **Metric:** "Which customers are likely to cancel their subscription next month?"
+- **Key Tools:** Machine Learning, Trend Lines.
 
 ### 💡 4. Prescriptive Analysis
+
 > **Goal:** Determine the best path forward.
-* **Metric:** "What is the optimal delivery route to save fuel?"
-* **Key Tools:** Optimization Algorithms, AI Simulations.
+
+- **Metric:** "What is the optimal delivery route to save fuel?"
+- **Key Tools:** Optimization Algorithms, AI Simulations.
 
 ---
 
 ## Analysis Workflow
+
 1. **Data Requirements:** Define what you are measuring.
 2. **Data Collection:** Gathering info from various sources.
 3. **Data Cleaning:** Removing "garbage" data (outliers/errors).
@@ -273,5 +284,49 @@ Data Analysis is the systematic application of statistical and logical technique
 ---
 
 [https://codanics.com/population-vs-sample/](https://codanics.com/population-vs-sample/)
+
+---
+
+[https://codanics.com/variability-in-statistics/](https://codanics.com/variability-in-statistics/)
+
+---
+
+# Variability in Statistics
+
+**Variability** refers to how "spread out" or "clustered" the data points are in a distribution.
+
+## Key Measures of Spread
+
+| Measure            | Definition                               | Best Used When...                               |
+| :----------------- | :--------------------------------------- | :---------------------------------------------- |
+| **Range**          | Difference between max and min.          | You need a quick, rough estimate.               |
+| **IQR**            | Range of the middle 50% of data.         | You have outliers or skewed data.               |
+| **Variance**       | Average squared deviation from the mean. | Performing advanced statistical calculations.   |
+| **Std. Deviation** | Square root of variance.                 | You need to interpret spread in original units. |
+
+---
+
+## Visualizing Variability
+
+### High Variability
+
+- Data is spread out.
+- The "bell curve" is short and wide.
+- Predictions are less reliable.
+
+### Low Variability
+
+- Data is tightly clustered around the mean.
+- The "bell curve" is tall and narrow.
+- Predictions are more reliable.
+
+---
+
+## Quick Checklist
+
+- [ ] Calculate the **Range** for a quick look.
+- [ ] Use **Standard Deviation** for normal distributions.
+- [ ] Use **IQR** if the data has extreme outliers.
+- [ ] Compare the **Coefficient of Variation** if comparing two datasets with different units.
 
 ---
