@@ -69,3 +69,55 @@ This document outlines the four levels of measurement used in statistics to help
 | **Ordinal**  |      ✅      |   ✅    |        ❌        |     ❌     |
 | **Interval** |      ✅      |   ✅    |        ✅        |     ❌     |
 | **Ratio**    |      ✅      |   ✅    |        ✅        |     ✅     |
+
+# Statistical Concepts: Triangulation
+
+This document provides an overview of **Triangulation** in research and statistics, covering its types, advantages, and limitations.
+
+---
+
+## What is Triangulation?
+
+**Triangulation** is the practice of using multiple methods, data sources, investigators, or theories to study a single phenomenon. By approaching a research question from different angles, researchers can cross-verify results and increase the reliability of their findings.
+
+### Types of Triangulation
+
+1. **Methodological:** Combining different methods (e.g., surveys + focus groups).
+2. **Data:** Collecting data from different times, spaces, or persons.
+3. **Investigator:** Using multiple researchers to observe and analyze the same data.
+4. **Theoretical:** Using different theoretical perspectives to interpret a single set of data.
+
+---
+
+## Pros and Cons Analysis
+
+### Advantages (Pros)
+
+| Feature               | Benefit                                                                                            |
+| :-------------------- | :------------------------------------------------------------------------------------------------- |
+| **Enhanced Validity** | Corroborating evidence from different sources makes the findings more credible.                    |
+| **Rich Nuance**       | Provides a more complete picture (e.g., Quantitative shows _trends_, Qualitative shows _reasons_). |
+| **Reduced Bias**      | Offsets the inherent weaknesses or biases of a single method or researcher.                        |
+| **Discovery**         | Contradictions between data sources can lead to new, unexpected insights.                          |
+
+### Disadvantages (Cons)
+
+| Feature            | Drawback                                                                                 |
+| :----------------- | :--------------------------------------------------------------------------------------- |
+| **High Cost**      | Requires more funding, tools, and participants than single-method studies.               |
+| **Time-Consuming** | Data collection and analysis phases take significantly longer.                           |
+| **Complexity**     | Integrating divergent data types (like numbers vs. text) can be technically difficult.   |
+| **Conflict**       | Results may contradict each other, making it hard to form a single, cohesive conclusion. |
+
+---
+
+## Summary Checklist for Research
+
+- [ ] Is the research question complex enough to require multiple methods?
+- [ ] Do I have the resources (time/budget) for triangulation?
+- [ ] Have I defined how I will reconcile conflicting data points?
+- [ ] Are the chosen methods independent enough to provide a fresh perspective?
+
+---
+
+_Created for the Research Methods documentation project._
