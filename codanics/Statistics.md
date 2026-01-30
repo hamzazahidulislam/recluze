@@ -332,3 +332,7 @@ Data Analysis is the systematic application of statistical and logical technique
 ---
 
 [https://codanics.com/variance-in-statistics/](https://codanics.com/variance-in-statistics/)
+
+---
+
+[https://codanics.com/standard-deviation/](https://codanics.com/standard-deviation/)
