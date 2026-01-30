@@ -336,3 +336,41 @@ Data Analysis is the systematic application of statistical and logical technique
 ---
 
 [https://codanics.com/standard-deviation/](https://codanics.com/standard-deviation/)
+
+---
+
+# SD vs. Standard Error of the Mean (SEM)
+
+While both measure variability, they serve two distinct purposes in statistical reporting.
+
+## Summary Comparison
+
+> **Standard Deviation (SD)**
+> * Measures the spread of **individual observations**.
+> * Does not change significantly with sample size.
+> * Purpose: **Descriptive** (How diverse is the sample?).
+
+> **Standard Error (SEM)**
+> * Measures the accuracy of the **sample mean**.
+> * Decreases as sample size increases.
+> * Purpose: **Inferential** (How close is the sample mean to the population mean?).
+
+---
+
+## When to Use Each in a Report
+
+### Use Standard Deviation (SD) when:
+* You are describing the characteristics of your participants (e.g., "The average age was 35 ± 5 years").
+* You want to show the biological or physical range of a variable.
+
+### Use Standard Error (SEM) when:
+* You are presenting a graph to show the effect of a treatment.
+* You want to show the precision of your estimate.
+* You are calculating **Confidence Intervals**.
+
+---
+
+## The "True Zero" of Uncertainty
+If your SEM is very large, it means your sample size is likely too small, and your "average" might change drastically if you tested a different group of people.
+
+---
