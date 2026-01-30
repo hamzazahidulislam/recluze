@@ -374,3 +374,39 @@ While both measure variability, they serve two distinct purposes in statistical 
 If your SEM is very large, it means your sample size is likely too small, and your "average" might change drastically if you tested a different group of people.
 
 ---
+
+# Error Bars and Whisker Plots
+
+Visual tools used to communicate the reliability and distribution of statistical data.
+
+## 📊 Error Bars
+Error bars are used on charts to indicate the error or uncertainty in a reported measurement.
+
+### Common Settings
+* **SD Error Bars:** "How much does the data vary?" (Descriptive).
+* **SEM Error Bars:** "How sure am I of this average?" (Inferential).
+* **95% CI Error Bars:** "If I repeat this, there is a 95% chance the mean falls here."
+
+---
+
+## 📦 Whisker Plots (Box Plots)
+Whiskers provide a visual summary of the range and distribution of a dataset.
+
+### Anatomy of a Box-and-Whisker
+1. **The Whiskers:** Extend to the Min and Max values (or $1.5 \times \text{IQR}$).
+2. **The Box:** Represents the **Interquartile Range (IQR)**—the middle 50% of data.
+3. **The Median:** The horizontal line cutting through the box.
+4. **Outliers:** Points plotted beyond the whiskers.
+
+---
+
+## How to Interpret Overlap
+* **No Overlap:** If error bars between two groups do not overlap, the difference is likely **statistically significant**.
+* **Large Overlap:** If error bars overlap significantly, the difference between groups is likely due to **random chance**.
+
+---
+
+## Checklist for Clear Charts
+- [ ] Does the legend state what the error bars represent (SD vs. SEM)?
+- [ ] Are outliers clearly marked on the whisker plot?
+- [ ] Is the Y-axis scaled appropriately to show the bars clearly?
