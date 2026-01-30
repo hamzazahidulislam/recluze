@@ -346,31 +346,36 @@ While both measure variability, they serve two distinct purposes in statistical 
 ## Summary Comparison
 
 > **Standard Deviation (SD)**
-> * Measures the spread of **individual observations**.
-> * Does not change significantly with sample size.
-> * Purpose: **Descriptive** (How diverse is the sample?).
+>
+> - Measures the spread of **individual observations**.
+> - Does not change significantly with sample size.
+> - Purpose: **Descriptive** (How diverse is the sample?).
 
 > **Standard Error (SEM)**
-> * Measures the accuracy of the **sample mean**.
-> * Decreases as sample size increases.
-> * Purpose: **Inferential** (How close is the sample mean to the population mean?).
+>
+> - Measures the accuracy of the **sample mean**.
+> - Decreases as sample size increases.
+> - Purpose: **Inferential** (How close is the sample mean to the population mean?).
 
 ---
 
 ## When to Use Each in a Report
 
 ### Use Standard Deviation (SD) when:
-* You are describing the characteristics of your participants (e.g., "The average age was 35 ± 5 years").
-* You want to show the biological or physical range of a variable.
+
+- You are describing the characteristics of your participants (e.g., "The average age was 35 ± 5 years").
+- You want to show the biological or physical range of a variable.
 
 ### Use Standard Error (SEM) when:
-* You are presenting a graph to show the effect of a treatment.
-* You want to show the precision of your estimate.
-* You are calculating **Confidence Intervals**.
+
+- You are presenting a graph to show the effect of a treatment.
+- You want to show the precision of your estimate.
+- You are calculating **Confidence Intervals**.
 
 ---
 
 ## The "True Zero" of Uncertainty
+
 If your SEM is very large, it means your sample size is likely too small, and your "average" might change drastically if you tested a different group of people.
 
 ---
@@ -380,19 +385,23 @@ If your SEM is very large, it means your sample size is likely too small, and yo
 Visual tools used to communicate the reliability and distribution of statistical data.
 
 ## 📊 Error Bars
+
 Error bars are used on charts to indicate the error or uncertainty in a reported measurement.
 
 ### Common Settings
-* **SD Error Bars:** "How much does the data vary?" (Descriptive).
-* **SEM Error Bars:** "How sure am I of this average?" (Inferential).
-* **95% CI Error Bars:** "If I repeat this, there is a 95% chance the mean falls here."
+
+- **SD Error Bars:** "How much does the data vary?" (Descriptive).
+- **SEM Error Bars:** "How sure am I of this average?" (Inferential).
+- **95% CI Error Bars:** "If I repeat this, there is a 95% chance the mean falls here."
 
 ---
 
 ## 📦 Whisker Plots (Box Plots)
+
 Whiskers provide a visual summary of the range and distribution of a dataset.
 
 ### Anatomy of a Box-and-Whisker
+
 1. **The Whiskers:** Extend to the Min and Max values (or $1.5 \times \text{IQR}$).
 2. **The Box:** Represents the **Interquartile Range (IQR)**—the middle 50% of data.
 3. **The Median:** The horizontal line cutting through the box.
@@ -401,12 +410,92 @@ Whiskers provide a visual summary of the range and distribution of a dataset.
 ---
 
 ## How to Interpret Overlap
-* **No Overlap:** If error bars between two groups do not overlap, the difference is likely **statistically significant**.
-* **Large Overlap:** If error bars overlap significantly, the difference between groups is likely due to **random chance**.
+
+- **No Overlap:** If error bars between two groups do not overlap, the difference is likely **statistically significant**.
+- **Large Overlap:** If error bars overlap significantly, the difference between groups is likely due to **random chance**.
 
 ---
 
 ## Checklist for Clear Charts
+
 - [ ] Does the legend state what the error bars represent (SD vs. SEM)?
 - [ ] Are outliers clearly marked on the whisker plot?
 - [ ] Is the Y-axis scaled appropriately to show the bars clearly?
+
+---
+
+# The Importance of Normal Distribution
+
+The **Normal Distribution** is a probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean.
+
+## Why Data Scientists Care
+
+### 1. Predictability (The Empirical Rule)
+
+Knowing that 95% of your data exists within 2 standard deviations allows for:
+
+- **Risk Assessment:** Predicting the likelihood of extreme events.
+- **Quality Control:** Identifying when a process has "drifted" too far from the average.
+
+### 2. Standardizing Data ($Z$-Scores)
+
+Normal distribution allows us to compare "apples to oranges" by converting different units into $Z$-scores.
+$$Z = \frac{x - \mu}{\sigma}$$
+_This is essential for machine learning models that handle multiple types of data (e.g., comparing Age in years to Income in dollars)._
+
+### 3. Foundation for Inference
+
+Most inferential statistics (drawing conclusions about a population from a sample) rely on the **Central Limit Theorem**. Without the Normal Distribution, we couldn't reliably use a sample of 1,000 people to predict the behavior of 1,000,000.
+
+---
+
+## Common Real-World Examples
+
+- **Human Traits:** Height, weight, and IQ scores.
+- **Finance:** Stock market returns (over long periods) and log-returns.
+- **Measurement Errors:** Errors made by physical instruments in labs.
+
+---
+
+## What to do if data is NOT normal?
+
+- [ ] **Log Transformation:** Helps "squash" long tails.
+- [ ] **Square Root Transformation:** Often used for count data.
+- [ ] **Box-Cox Transformation:** A mathematical way to find the best power transformation to reach normality.
+
+---
+
+# How to Normalize and Scale Data
+
+In Data Science, "Normalization" ensures that all input features contribute equally to the model and meet statistical assumptions.
+
+## 🛠 Available Methods
+
+### 1. Min-Max Scaling
+
+- **Goal:** Fit everything into a [0, 1] range.
+- **Python (Scikit-Learn):** `MinMaxScaler()`
+- **When to use:** When you know the bounds of your data (e.g., image pixels 0-255).
+
+### 2. Standardization (Z-Score)
+
+- **Goal:** Center data at 0 with unit variance.
+- **Python (Scikit-Learn):** `StandardScaler()`
+- **When to use:** For most Machine Learning algorithms (SVM, Regression).
+
+### 3. Log Transformation
+
+- **Goal:** Fix right-skewness.
+- **Formula:** `np.log(x)`
+- **When to use:** When data spans several orders of magnitude (e.g., wealth distribution).
+
+---
+
+## Which method should I choose?
+
+- [ ] **Is your data skewed?** Use Log or Box-Cox transformation first.
+- [ ] **Are there outliers?** Use `RobustScaler` or `StandardScaler`.
+- [ ] **Are you using Deep Learning?** Use `MinMaxScaler` for input layers.
+- [ ] **Are you using K-Means clustering?** Use `StandardScaler` (distance-based).
+
+---
