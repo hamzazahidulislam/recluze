@@ -330,3 +330,5 @@ Data Analysis is the systematic application of statistical and logical technique
 - [ ] Compare the **Coefficient of Variation** if comparing two datasets with different units.
 
 ---
+
+[https://codanics.com/variance-in-statistics/](https://codanics.com/variance-in-statistics/)
