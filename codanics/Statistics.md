@@ -691,5 +691,4 @@ for i in range(len(result.critical_values)):
     else:
         print(f'At {sl}% level: Data looks Non-Normal (reject H0)')
 
-
 ```
