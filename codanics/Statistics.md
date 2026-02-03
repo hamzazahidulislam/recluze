@@ -692,3 +692,53 @@ for i in range(len(result.critical_values)):
         print(f'At {sl}% level: Data looks Non-Normal (reject H0)')
 
 ```
+
+---
+
+# Primary vs. Secondary Data
+
+Understanding the source of your data is critical for determining the reliability and scope of your analysis.
+
+## 🟢 Primary Data
+
+> **"First-hand" information collected for a specific purpose.**
+
+### Pros
+
+- **Specific:** Addresses your exact research question.
+- **Control:** You control the methodology and definitions.
+- **Ownership:** The data belongs to you/your organization.
+
+### Cons
+
+- **Expensive:** Costs associated with tools, participants, and labor.
+- **Time-consuming:** Requires a full collection cycle.
+
+---
+
+## 🔵 Secondary Data
+
+> **"Second-hand" information that already exists elsewhere.**
+
+### Pros
+
+- **Speed:** Available immediately for analysis.
+- **Cost:** Often free or significantly cheaper than primary collection.
+- **Scale:** Access to massive datasets (like the Census) that would be impossible for one person to collect.
+
+### Cons
+
+- **Lack of Control:** You don't know exactly how the data was cleaned or handled.
+- **Outdated:** The data might be several years old.
+- **Fit:** It may not contain the exact variables you need.
+
+---
+
+## Selection Checklist
+
+- [ ] **Budget:** If $0, use Secondary.
+- [ ] **Urgency:** If needed today, use Secondary.
+- [ ] **Uniqueness:** If the question has never been asked, use Primary.
+- [ ] **Accuracy:** If high precision is required, use Primary.
+
+---
