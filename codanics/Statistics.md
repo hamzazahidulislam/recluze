@@ -742,38 +742,45 @@ Understanding the source of your data is critical for determining the reliabilit
 - [ ] **Accuracy:** If high precision is required, use Primary.
 
 ---
+
 # Data Types by Source: Primary vs. Secondary
 
 This file breaks down the technical formats and states of data depending on whether it is sourced first-hand or second-hand.
 
 ## 🟢 Primary Data: The Raw State
+
 Primary data is **unprocessed**. It is the "atomic" unit of information.
 
-* **Format Type:** Often semi-structured or unstructured.
-* **Data State:** Raw. It contains all original noise, errors, and outliers.
-* **Examples:** * Individual responses to a questionnaire.
-    * Raw log files from a website server.
-    * Video footage from a security camera.
+- **Format Type:** Often semi-structured or unstructured.
+- **Data State:** Raw. It contains all original noise, errors, and outliers.
+- **Examples:** \* Individual responses to a questionnaire.
+  - Raw log files from a website server.
+  - Video footage from a security camera.
 
 ## 🔵 Secondary Data: The Compiled State
+
 Secondary data is **processed**. It is data that has been "digested" by another entity.
 
-* **Format Type:** Highly structured.
-* **Data State:** Refined. It is often aggregated (sums, averages, or counts).
-* **Examples:**
-    * A census report showing "Population by City" (rather than individual names).
-    * Financial statements (Balance sheets, P&L).
-    * Industry trend reports from agencies like Gartner or McKinsey.
+- **Format Type:** Highly structured.
+- **Data State:** Refined. It is often aggregated (sums, averages, or counts).
+- **Examples:**
+  - A census report showing "Population by City" (rather than individual names).
+  - Financial statements (Balance sheets, P&L).
+  - Industry trend reports from agencies like Gartner or McKinsey.
 
 ---
 
 ## Technical Summary
 
-| Technical Aspect | Primary | Secondary |
-| :--- | :--- | :--- |
-| **Granularity** | Atomic (Single points) | Aggregate (Grouped points) |
-| **Cleaning** | Required (Manual/Code) | Pre-cleaned (Usually) |
-| **Integrity** | You verify it | You trust the source |
-| **Flexibility** | High (Can re-categorize) | Low (Fixed categories) |
+| Technical Aspect | Primary                  | Secondary                  |
+| :--------------- | :----------------------- | :------------------------- |
+| **Granularity**  | Atomic (Single points)   | Aggregate (Grouped points) |
+| **Cleaning**     | Required (Manual/Code)   | Pre-cleaned (Usually)      |
+| **Integrity**    | You verify it            | You trust the source       |
+| **Flexibility**  | High (Can re-categorize) | Low (Fixed categories)     |
 
 ---
+
+[https://archive.ics.uci.edu/](https://archive.ics.uci.edu/)
+
+[https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/)
