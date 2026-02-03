@@ -503,6 +503,7 @@ In Data Science, "Normalization" ensures that all input features contribute equa
 ## skewness and kurtosis
 
 ---
+
 # Comparison of Scaling and Normalization Methods
 
 This table provides a quick reference for choosing the correct data transformation technique based on the range requirements and the presence of outliers.
@@ -511,33 +512,39 @@ This table provides a quick reference for choosing the correct data transformati
 
 ## Comparison Table
 
-| Method | Output Range | Handles Outliers? | Changes Shape? |
-| :--- | :--- | :--- | :--- |
-| **Min-Max** | `[0, 1]` | ❌ Poorly | No |
-| **Z-Score** | `[-∞, +∞]` | ✅ Well | No |
-| **Log Trans** | `[0, +∞]` | ✅ Greatly | ✅ Yes |
-| **Robust Scaler** | Variable | 💎 Best | No |
+| Method            | Output Range | Handles Outliers? | Changes Shape? |
+| :---------------- | :----------- | :---------------- | :------------- |
+| **Min-Max**       | `[0, 1]`     | ❌ Poorly         | No             |
+| **Z-Score**       | `[-∞, +∞]`   | ✅ Well           | No             |
+| **Log Trans**     | `[0, +∞]`    | ✅ Greatly        | ✅ Yes         |
+| **Robust Scaler** | Variable     | 💎 Best           | No             |
 
 ---
 
 ## Key Takeaways
 
 ### 1. When to use Min-Max
+
 Use this when you need a bounded range (like 0 to 1) for algorithms that don't handle large values well, such as **Neural Networks** or **Image Processing**. Avoid if you have extreme outliers, as they will "squash" the normal data into a tiny range.
 
 ### 2. When to use Z-Score (Standardization)
+
 The "default" choice for most **Linear Models** (Linear Regression, Logistic Regression) and **Support Vector Machines**. It assumes the underlying data is Gaussian (Normal).
 
 ### 3. When to use Log Transformation
+
 Essential for **Skewed Data**. If your data has a "long tail" (like income or house prices), the Log Transform changes the shape to make it more normally distributed.
 
 ### 4. When to use Robust Scaler
+
 If your dataset is "dirty" with many **outliers** that you cannot remove, the Robust Scaler is best because it uses the **Median** and **Interquartile Range (IQR)** rather than the Mean and Standard Deviation.
 
 ---
-*File: normalization_comparison.md*
+
+_File: normalization_comparison.md_
 
 ---
+
 # Shapiro-Wilk Test for Normality
 
 The **Shapiro-Wilk test** is a frequentist statistical test used to check whether a sample $x_1, ..., x_n$ comes from a normally distributed population.
@@ -546,19 +553,21 @@ The **Shapiro-Wilk test** is a frequentist statistical test used to check whethe
 
 The test produces a **W-statistic** and a **p-value**.
 
-| p-value | Interpretation | Action |
-| :--- | :--- | :--- |
-| **> 0.05** | Data appears **Normal** | Use Parametric tests (T-test, ANOVA) |
-| **≤ 0.05** | Data is **Non-Normal** | Use Non-parametric tests (Mann-Whitney) |
+| p-value    | Interpretation          | Action                                  |
+| :--------- | :---------------------- | :-------------------------------------- |
+| **> 0.05** | Data appears **Normal** | Use Parametric tests (T-test, ANOVA)    |
+| **≤ 0.05** | Data is **Non-Normal**  | Use Non-parametric tests (Mann-Whitney) |
 
 ---
 
 ## Usage Scenarios
 
 ### 1. Pre-analysis Check
+
 Before running a Linear Regression, run Shapiro-Wilk on your residuals to ensure the model assumptions are met.
 
 ### 2. Small to Medium Datasets
+
 It is most effective for sample sizes between **3 and 50**. For very large datasets, use visual checks like Q-Q plots alongside the test.
 
 ---
@@ -588,21 +597,23 @@ else:
 **D'Agostino's $K^2$ test** is an omnibus test for normality. It is designed to detect departures from normality by measuring the skewness and kurtosis of a dataset.
 
 ## The Mathematical Components
+
 The test calculates the **$Z$-score** for skewness ($s$) and the **$Z$-score** for kurtosis ($k$):
 $$K^2 = Z^2_s + Z^2_k$$
 
 ## Interpretation
 
-| p-value | Result | Meaning |
-| :--- | :--- | :--- |
-| **$p > 0.05$** | Fail to Reject $H_0$ | The data is consistent with a normal distribution. |
-| **$p \le 0.05$** | Reject $H_0$ | The data is significantly non-normal. |
+| p-value          | Result               | Meaning                                            |
+| :--------------- | :------------------- | :------------------------------------------------- |
+| **$p > 0.05$**   | Fail to Reject $H_0$ | The data is consistent with a normal distribution. |
+| **$p \le 0.05$** | Reject $H_0$         | The data is significantly non-normal.              |
 
 ---
 
 ## Advantages
-* **Informative:** Because it's based on skewness and kurtosis, if the test fails, you know *why* (e.g., your data is too skewed).
-* **Robustness:** Performs better than Shapiro-Wilk on large datasets ($n > 1000$) where Shapiro-Wilk becomes over-sensitive.
+
+- **Informative:** Because it's based on skewness and kurtosis, if the test fails, you know _why_ (e.g., your data is too skewed).
+- **Robustness:** Performs better than Shapiro-Wilk on large datasets ($n > 1000$) where Shapiro-Wilk becomes over-sensitive.
 
 ---
 
@@ -623,3 +634,62 @@ if p > 0.05:
     print("Likely Normal")
 else:
     print("Likely Not Normal")
+```
+
+---
+
+# Anderson-Darling (A-D) Test
+
+The **Anderson-Darling test** is a statistical test used to determine if a sample of data comes from a specific distribution (most commonly the Normal distribution).
+
+## Key Characteristic: "Tail Sensitivity"
+
+While other tests focus on the center of the data, the A-D test is designed to be **more sensitive to the tails**. This makes it ideal for fields where extreme values are critical (e.g., insurance, safety engineering).
+
+---
+
+## Interpretation Table
+
+To interpret the A-D test, compare the **A2 Statistic** against the **Critical Value** for your desired alpha level (usually 0.05).
+
+| Condition               | Result               | Conclusion                                 |
+| :---------------------- | :------------------- | :----------------------------------------- |
+| **A2 > Critical Value** | Reject $H_0$         | Data does **not** follow the distribution. |
+| **A2 < Critical Value** | Fail to Reject $H_0$ | Data **follows** the distribution.         |
+
+---
+
+## Pros and Cons
+
+### Pros
+
+- Extremely powerful and sensitive.
+- Can be used for distributions other than Normal (e.g., Weibull, Exponential, Logistic).
+- More reliable than the Kolmogorov-Smirnov test.
+
+### Cons
+
+- Critical values must be calculated for each specific distribution type.
+- Can be "too sensitive" for very large datasets, flagging tiny deviations.
+
+---
+
+## Python Implementation (SciPy)
+
+```python
+from scipy.stats import anderson
+
+data = [0.873, 2.817, 0.121, -0.945, -0.055, 1.436, 0.360, -1.478, -1.637, -1.869]
+result = anderson(data)
+
+print(f'Statistic: {result.statistic:.3f}')
+
+for i in range(len(result.critical_values)):
+    sl, cv = result.significance_level[i], result.critical_values[i]
+    if result.statistic < cv:
+        print(f'At {sl}% level: Data looks Normal (fail to reject H0)')
+    else:
+        print(f'At {sl}% level: Data looks Non-Normal (reject H0)')
+
+
+```
