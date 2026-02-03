@@ -499,3 +499,40 @@ In Data Science, "Normalization" ensures that all input features contribute equa
 - [ ] **Are you using K-Means clustering?** Use `StandardScaler` (distance-based).
 
 ---
+
+## skewness and kurtosis
+
+---
+# Comparison of Scaling and Normalization Methods
+
+This table provides a quick reference for choosing the correct data transformation technique based on the range requirements and the presence of outliers.
+
+---
+
+## Comparison Table
+
+| Method | Output Range | Handles Outliers? | Changes Shape? |
+| :--- | :--- | :--- | :--- |
+| **Min-Max** | `[0, 1]` | ❌ Poorly | No |
+| **Z-Score** | `[-∞, +∞]` | ✅ Well | No |
+| **Log Trans** | `[0, +∞]` | ✅ Greatly | ✅ Yes |
+| **Robust Scaler** | Variable | 💎 Best | No |
+
+---
+
+## Key Takeaways
+
+### 1. When to use Min-Max
+Use this when you need a bounded range (like 0 to 1) for algorithms that don't handle large values well, such as **Neural Networks** or **Image Processing**. Avoid if you have extreme outliers, as they will "squash" the normal data into a tiny range.
+
+### 2. When to use Z-Score (Standardization)
+The "default" choice for most **Linear Models** (Linear Regression, Logistic Regression) and **Support Vector Machines**. It assumes the underlying data is Gaussian (Normal).
+
+### 3. When to use Log Transformation
+Essential for **Skewed Data**. If your data has a "long tail" (like income or house prices), the Log Transform changes the shape to make it more normally distributed.
+
+### 4. When to use Robust Scaler
+If your dataset is "dirty" with many **outliers** that you cannot remove, the Robust Scaler is best because it uses the **Median** and **Interquartile Range (IQR)** rather than the Mean and Standard Deviation.
+
+---
+*File: normalization_comparison.md*
