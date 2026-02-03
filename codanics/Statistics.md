@@ -784,3 +784,43 @@ Secondary data is **processed**. It is data that has been "digested" by another 
 [https://archive.ics.uci.edu/](https://archive.ics.uci.edu/)
 
 [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/)
+
+---
+
+# Best Practices for Data Collection
+
+Following these principles ensures that your dataset is high-quality, ethically sound, and ready for analysis.
+
+## ✅ The "Golden Rules"
+
+### 1. Identify "Must-Have" vs. "Nice-to-Have"
+Focus on the variables that directly answer your research question. Collecting unnecessary data increases costs and privacy risks.
+
+### 2. Standardize at the Source
+* **Units:** Decide on units (Metric vs. Imperial) before collection starts.
+* **Naming:** Use consistent naming conventions (e.g., `user_id` vs `UserID`).
+* **Format:** Use ISO standards for dates (`YYYY-MM-DD`).
+
+### 3. Implement Quality Controls
+- [ ] **Validation:** Use data validation rules to reject impossible values (e.g., negative prices).
+- [ ] **Cleaning:** Plan for how to handle missing data or null values.
+- [ ] **Auditing:** Periodically check a random sample of the data for accuracy.
+
+### 4. Ethical Compliance
+* **Consent:** Always obtain explicit permission.
+* **Retention:** Only keep data for as long as it is needed (Data Minimization).
+* **Transparency:** Be clear about how the data will be used.
+
+---
+
+## Summary Table: Data Collection Workflow
+
+| Phase | Action | Best Practice |
+| :--- | :--- | :--- |
+| **Planning** | Define Objective | Link every data point to a specific goal. |
+| **Design** | Choose Tools | Use digital tools that minimize human entry error. |
+| **Execution** | Monitor | Check data daily for early signs of bias or system failure. |
+| **Storage** | Secure | Encrypt sensitive data and back it up regularly. |
+
+---
+> **"Measure twice, collect once."** High-quality collection saves weeks of cleaning time later.
