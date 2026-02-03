@@ -536,3 +536,90 @@ If your dataset is "dirty" with many **outliers** that you cannot remove, the Ro
 
 ---
 *File: normalization_comparison.md*
+
+---
+# Shapiro-Wilk Test for Normality
+
+The **Shapiro-Wilk test** is a frequentist statistical test used to check whether a sample $x_1, ..., x_n$ comes from a normally distributed population.
+
+## Interpretation of Results
+
+The test produces a **W-statistic** and a **p-value**.
+
+| p-value | Interpretation | Action |
+| :--- | :--- | :--- |
+| **> 0.05** | Data appears **Normal** | Use Parametric tests (T-test, ANOVA) |
+| **≤ 0.05** | Data is **Non-Normal** | Use Non-parametric tests (Mann-Whitney) |
+
+---
+
+## Usage Scenarios
+
+### 1. Pre-analysis Check
+Before running a Linear Regression, run Shapiro-Wilk on your residuals to ensure the model assumptions are met.
+
+### 2. Small to Medium Datasets
+It is most effective for sample sizes between **3 and 50**. For very large datasets, use visual checks like Q-Q plots alongside the test.
+
+---
+
+## Implementation (Python Example)
+
+```python
+from scipy.stats import shapiro
+
+data = [0.873, 2.817, 0.121, -0.945, -0.055, 1.436, 0.360, -1.478, -1.637, -1.869]
+stat, p = shapiro(data)
+
+print(f'Statistics={stat:.3f}, p={p:.3f}')
+
+if p > 0.05:
+    print('Sample looks Gaussian (fail to reject H0)')
+else:
+    print('Sample does not look Gaussian (reject H0)')
+
+
+```
+
+---
+
+# D'Agostino's K^2 Test
+
+**D'Agostino's $K^2$ test** is an omnibus test for normality. It is designed to detect departures from normality by measuring the skewness and kurtosis of a dataset.
+
+## The Mathematical Components
+The test calculates the **$Z$-score** for skewness ($s$) and the **$Z$-score** for kurtosis ($k$):
+$$K^2 = Z^2_s + Z^2_k$$
+
+## Interpretation
+
+| p-value | Result | Meaning |
+| :--- | :--- | :--- |
+| **$p > 0.05$** | Fail to Reject $H_0$ | The data is consistent with a normal distribution. |
+| **$p \le 0.05$** | Reject $H_0$ | The data is significantly non-normal. |
+
+---
+
+## Advantages
+* **Informative:** Because it's based on skewness and kurtosis, if the test fails, you know *why* (e.g., your data is too skewed).
+* **Robustness:** Performs better than Shapiro-Wilk on large datasets ($n > 1000$) where Shapiro-Wilk becomes over-sensitive.
+
+---
+
+## Python Implementation (SciPy)
+
+```python
+from scipy.stats import normaltest
+
+# Example data
+data = [1.2, 1.5, 1.3, 1.8, 2.0, 1.9, 1.4, 1.6, 1.7, 2.1, 2.2, 1.1, 1.5, 1.6, 1.9, 2.0, 1.4, 1.8, 1.5, 1.6]
+
+# Perform D'Agostino's K^2 Test
+stat, p = normaltest(data)
+
+print(f'K^2 Statistic: {stat:.3f}, p-value: {p:.3f}')
+
+if p > 0.05:
+    print("Likely Normal")
+else:
+    print("Likely Not Normal")
