@@ -995,3 +995,5 @@ To find the right chart, start in the center of the diagram and answer these que
 
 ---
 *Source: ExtremePresentation.com*
+
+## Book *Statistics in a Nutshell*, *Practical Statistics for Data Scientists: 50 Essential Concepts Using R and Python Paperback* 
