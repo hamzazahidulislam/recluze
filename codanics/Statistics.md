@@ -921,3 +921,40 @@ The process of using data analysis to deduce properties of an underlying probabi
 - [ ] **Want to know if your new drug works for everyone?** Use Inferential.
 
 ---
+
+# Descriptive vs. Inferential Statistics
+
+In Data Science, we use Descriptive stats to understand our current dataset and Inferential stats to make decisions about the future or the "real world."
+
+---
+
+## 📊 Descriptive Statistics
+> **"What happened?"**
+
+Descriptive statistics provide a "snapshot" of your data. If you have 100 rows of data, these stats condense them into a few easy-to-read numbers.
+
+### Key Categories:
+1. **Measures of Central Tendency:** Where is the middle? (Mean, Median, Mode).
+2. **Measures of Dispersion:** How spread out is the data? (Range, Standard Deviation).
+3. **Distribution:** What does the shape look like? (Skewness, Kurtosis).
+
+---
+
+## 🔮 Inferential Statistics
+> **"What does this mean for everyone else?"**
+
+Inferential statistics allow you to test a hypothesis and see if your results are **statistically significant** or just a result of random chance.
+
+### Key Concepts:
+1. **Hypothesis Testing:** Is there a real difference between Group A and Group B?
+2. **Confidence Intervals:** What is the range where the "true" answer likely lives?
+3. **P-Values:** What is the probability that this result happened by pure luck?
+
+---
+
+## The Workflow
+1. Collect **Raw Data**.
+2. Run **Descriptive Statistics** to find the mean and check for errors.
+3. Use **Inferential Statistics** to see if your findings apply to the whole population.
+
+---
