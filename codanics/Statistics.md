@@ -824,3 +824,34 @@ Focus on the variables that directly answer your research question. Collecting u
 
 ---
 > **"Measure twice, collect once."** High-quality collection saves weeks of cleaning time later.
+
+---
+# Types of Sampling in Statistics
+
+Sampling is a critical step in data collection that determines how well your results represent the real world.
+
+## 🎲 1. Probability Sampling
+*Methods that rely on random selection.*
+
+* **Simple Random:** Like a lottery. Low bias, but needs a complete list of the population.
+* **Stratified:** Divide into groups (e.g., Income levels) and sample from each. Ensures sub-group representation.
+* **Systematic:** Select every $k^{th}$ person. Easy to implement but can be biased if the list has a pattern.
+* **Cluster:** Sample entire groups (e.g., Zip codes). Cost-effective for large geographic areas.
+
+## 🚶 2. Non-Probability Sampling
+*Methods based on convenience or specific criteria.*
+
+* **Convenience:** Fast and easy, but often highly biased.
+* **Quota:** Similar to stratified, but selection is not random—you just stop once you hit a number.
+* **Snowball:** Participants recruit more participants. Best for hard-to-reach groups.
+* **Purposive:** The researcher uses their own "gut feeling" to pick specific cases.
+
+---
+
+## When to use which?
+- [ ] **If you need to prove a theory for a whole country:** Use **Stratified** or **Simple Random**.
+- [ ] **If you are just testing a new product idea quickly:** Use **Convenience**.
+- [ ] **If your population is very small and specific (e.g., CEOs):** Use **Purposive**.
+- [ ] **If you are trying to find people who do illegal activities (e.g., hackers):** Use **Snowball**.
+
+---
