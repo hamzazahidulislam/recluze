@@ -855,3 +855,32 @@ Sampling is a critical step in data collection that determines how well your res
 - [ ] **If you are trying to find people who do illegal activities (e.g., hackers):** Use **Snowball**.
 
 ---
+
+# Representative vs. Non-Representative Sampling
+
+The quality of your statistical conclusions depends entirely on how well your sample mirrors the population.
+
+## ✅ Representative Sampling
+> **"A Mirror of the Whole"**
+
+* **Key Requirement:** Every member of the population must have a known and fair chance of being selected.
+* **Benefit:** Low **Sampling Error**. You can confidently say "Because 10% of our sample said X, we believe 10% of the country thinks X."
+* **Common Bias avoided:** Selection Bias.
+
+## ❌ Non-Representative Sampling
+> **"A Distorted View"**
+
+* **Key Requirement:** Often based on ease of access or specific intent.
+* **Risk:** Leads to **Sampling Bias**. The results only apply to the people you actually talked to.
+* **Common Example:** An online poll on a specific website. Only people who visit that site and feel strongly enough to vote are represented (Voluntary Response Bias).
+
+---
+
+## How to move from Non-Representative to Representative?
+
+1.  **Randomization:** Use random number generators to pick participants.
+2.  **Stratification:** Purposefully pick people from different sub-groups (age, race, geography) to ensure the ratios match the census.
+3.  **Weighting:** If you accidentally over-sampled one group, use mathematical "weights" during analysis to balance the results back to the population average.
+
+---
+> **Rule of Thumb:** If you are making a business or medical decision that affects everyone, you **must** have a representative sample. If you are just "brainstorming" or testing a prototype, a non-representative sample is often fine.
