@@ -884,3 +884,40 @@ The quality of your statistical conclusions depends entirely on how well your sa
 
 ---
 > **Rule of Thumb:** If you are making a business or medical decision that affects everyone, you **must** have a representative sample. If you are just "brainstorming" or testing a prototype, a non-representative sample is often fine.
+
+---
+# Methodological Types of Data Analysis
+
+While the "Maturity Model" (Descriptive to Prescriptive) tells us the *goal*, these types tell us the *method*.
+
+---
+
+## 🔢 1. Quantitative Analysis
+Focuses on quantifying the problem by generating numerical data.
+* **Key Tools:** Mean, Median, Standard Deviation, Regression.
+* **Best for:** Measuring ROI, sales growth, or scientific experiments.
+
+## 📝 2. Qualitative Analysis
+Focuses on understanding the underlying reasons and motivations.
+* **Key Tools:** Interviews, Focus Groups, Observation.
+* **Best for:** Understanding user experience (UX) or brand perception.
+
+## 🕵️ 3. Exploratory Data Analysis (EDA)
+An approach to analyzing data sets to summarize their main characteristics, often with visual methods.
+* **Key Tools:** Histograms, Correlation Matrices, Scatter Plots.
+* **Best for:** Finding errors in data and identifying patterns for further study.
+
+## 🎲 4. Inferential Analysis
+The process of using data analysis to deduce properties of an underlying probability distribution.
+* **Key Tools:** P-values, Confidence Intervals, Z-tests.
+* **Best for:** Predicting national election results from a sample of 1,000 voters.
+
+---
+
+## Which one should I use?
+- [ ] **Need a number for a report?** Use Quantitative.
+- [ ] **Need to know why customers are unhappy?** Use Qualitative.
+- [ ] **Just received a messy dataset?** Use Exploratory.
+- [ ] **Want to know if your new drug works for everyone?** Use Inferential.
+
+---
