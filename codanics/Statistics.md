@@ -958,3 +958,40 @@ Inferential statistics allow you to test a hypothesis and see if your results ar
 3. Use **Inferential Statistics** to see if your findings apply to the whole population.
 
 ---
+
+[Dr. Andrew Abella’s Chart Chooser: The First Popularized Catalog](https://medium.com/@antonioneto_17307/dr-andrew-abellas-chart-chooser-the-first-popularized-catalog-7ca5ba55aa6f)
+
+---
+
+# Dr. Andrew Abela’s Chart Chooser
+
+The Abela Chart Chooser is a diagnostic tool to ensure your data visualization matches your analytical goal.
+
+## 🧭 The Decision Tree
+
+To find the right chart, start in the center of the diagram and answer these questions:
+
+### 1. What is your goal?
+* **Comparison:** Showing differences between values.
+* **Distribution:** Showing the frequency or spread of data.
+* **Composition:** Showing how things break down into parts.
+* **Relationship:** Showing how two or more variables interact.
+
+### 2. Is there a Time element?
+* **If Yes:** Use Line or Column charts to show progression.
+* **If No:** Use Bar charts or Scatter plots to show static states.
+
+### 3. How many variables do you have?
+* **1 Variable:** Histogram or Bar chart.
+* **2 Variables:** Scatter Plot.
+* **3 Variables:** Bubble Chart.
+
+---
+
+## 💡 Key Takeaways
+* **Pie Charts:** Should only be used for simple compositions (shares of a whole). Never use them for comparisons.
+* **Line vs. Bar:** Use Lines for trends (continuous) and Bars for categories (discrete).
+* **Simplicity:** If the chart looks too complex on the diagram, your data might be better presented in a **Table**.
+
+---
+*Source: ExtremePresentation.com*
