@@ -794,61 +794,70 @@ Following these principles ensures that your dataset is high-quality, ethically 
 ## ✅ The "Golden Rules"
 
 ### 1. Identify "Must-Have" vs. "Nice-to-Have"
+
 Focus on the variables that directly answer your research question. Collecting unnecessary data increases costs and privacy risks.
 
 ### 2. Standardize at the Source
-* **Units:** Decide on units (Metric vs. Imperial) before collection starts.
-* **Naming:** Use consistent naming conventions (e.g., `user_id` vs `UserID`).
-* **Format:** Use ISO standards for dates (`YYYY-MM-DD`).
+
+- **Units:** Decide on units (Metric vs. Imperial) before collection starts.
+- **Naming:** Use consistent naming conventions (e.g., `user_id` vs `UserID`).
+- **Format:** Use ISO standards for dates (`YYYY-MM-DD`).
 
 ### 3. Implement Quality Controls
+
 - [ ] **Validation:** Use data validation rules to reject impossible values (e.g., negative prices).
 - [ ] **Cleaning:** Plan for how to handle missing data or null values.
 - [ ] **Auditing:** Periodically check a random sample of the data for accuracy.
 
 ### 4. Ethical Compliance
-* **Consent:** Always obtain explicit permission.
-* **Retention:** Only keep data for as long as it is needed (Data Minimization).
-* **Transparency:** Be clear about how the data will be used.
+
+- **Consent:** Always obtain explicit permission.
+- **Retention:** Only keep data for as long as it is needed (Data Minimization).
+- **Transparency:** Be clear about how the data will be used.
 
 ---
 
 ## Summary Table: Data Collection Workflow
 
-| Phase | Action | Best Practice |
-| :--- | :--- | :--- |
-| **Planning** | Define Objective | Link every data point to a specific goal. |
-| **Design** | Choose Tools | Use digital tools that minimize human entry error. |
-| **Execution** | Monitor | Check data daily for early signs of bias or system failure. |
-| **Storage** | Secure | Encrypt sensitive data and back it up regularly. |
+| Phase         | Action           | Best Practice                                               |
+| :------------ | :--------------- | :---------------------------------------------------------- |
+| **Planning**  | Define Objective | Link every data point to a specific goal.                   |
+| **Design**    | Choose Tools     | Use digital tools that minimize human entry error.          |
+| **Execution** | Monitor          | Check data daily for early signs of bias or system failure. |
+| **Storage**   | Secure           | Encrypt sensitive data and back it up regularly.            |
 
 ---
+
 > **"Measure twice, collect once."** High-quality collection saves weeks of cleaning time later.
 
 ---
+
 # Types of Sampling in Statistics
 
 Sampling is a critical step in data collection that determines how well your results represent the real world.
 
 ## 🎲 1. Probability Sampling
-*Methods that rely on random selection.*
 
-* **Simple Random:** Like a lottery. Low bias, but needs a complete list of the population.
-* **Stratified:** Divide into groups (e.g., Income levels) and sample from each. Ensures sub-group representation.
-* **Systematic:** Select every $k^{th}$ person. Easy to implement but can be biased if the list has a pattern.
-* **Cluster:** Sample entire groups (e.g., Zip codes). Cost-effective for large geographic areas.
+_Methods that rely on random selection._
+
+- **Simple Random:** Like a lottery. Low bias, but needs a complete list of the population.
+- **Stratified:** Divide into groups (e.g., Income levels) and sample from each. Ensures sub-group representation.
+- **Systematic:** Select every $k^{th}$ person. Easy to implement but can be biased if the list has a pattern.
+- **Cluster:** Sample entire groups (e.g., Zip codes). Cost-effective for large geographic areas.
 
 ## 🚶 2. Non-Probability Sampling
-*Methods based on convenience or specific criteria.*
 
-* **Convenience:** Fast and easy, but often highly biased.
-* **Quota:** Similar to stratified, but selection is not random—you just stop once you hit a number.
-* **Snowball:** Participants recruit more participants. Best for hard-to-reach groups.
-* **Purposive:** The researcher uses their own "gut feeling" to pick specific cases.
+_Methods based on convenience or specific criteria._
+
+- **Convenience:** Fast and easy, but often highly biased.
+- **Quota:** Similar to stratified, but selection is not random—you just stop once you hit a number.
+- **Snowball:** Participants recruit more participants. Best for hard-to-reach groups.
+- **Purposive:** The researcher uses their own "gut feeling" to pick specific cases.
 
 ---
 
 ## When to use which?
+
 - [ ] **If you need to prove a theory for a whole country:** Use **Stratified** or **Simple Random**.
 - [ ] **If you are just testing a new product idea quickly:** Use **Convenience**.
 - [ ] **If your population is very small and specific (e.g., CEOs):** Use **Purposive**.
@@ -861,18 +870,20 @@ Sampling is a critical step in data collection that determines how well your res
 The quality of your statistical conclusions depends entirely on how well your sample mirrors the population.
 
 ## ✅ Representative Sampling
+
 > **"A Mirror of the Whole"**
 
-* **Key Requirement:** Every member of the population must have a known and fair chance of being selected.
-* **Benefit:** Low **Sampling Error**. You can confidently say "Because 10% of our sample said X, we believe 10% of the country thinks X."
-* **Common Bias avoided:** Selection Bias.
+- **Key Requirement:** Every member of the population must have a known and fair chance of being selected.
+- **Benefit:** Low **Sampling Error**. You can confidently say "Because 10% of our sample said X, we believe 10% of the country thinks X."
+- **Common Bias avoided:** Selection Bias.
 
 ## ❌ Non-Representative Sampling
+
 > **"A Distorted View"**
 
-* **Key Requirement:** Often based on ease of access or specific intent.
-* **Risk:** Leads to **Sampling Bias**. The results only apply to the people you actually talked to.
-* **Common Example:** An online poll on a specific website. Only people who visit that site and feel strongly enough to vote are represented (Voluntary Response Bias).
+- **Key Requirement:** Often based on ease of access or specific intent.
+- **Risk:** Leads to **Sampling Bias**. The results only apply to the people you actually talked to.
+- **Common Example:** An online poll on a specific website. Only people who visit that site and feel strongly enough to vote are represented (Voluntary Response Bias).
 
 ---
 
@@ -883,38 +894,49 @@ The quality of your statistical conclusions depends entirely on how well your sa
 3.  **Weighting:** If you accidentally over-sampled one group, use mathematical "weights" during analysis to balance the results back to the population average.
 
 ---
+
 > **Rule of Thumb:** If you are making a business or medical decision that affects everyone, you **must** have a representative sample. If you are just "brainstorming" or testing a prototype, a non-representative sample is often fine.
 
 ---
+
 # Methodological Types of Data Analysis
 
-While the "Maturity Model" (Descriptive to Prescriptive) tells us the *goal*, these types tell us the *method*.
+While the "Maturity Model" (Descriptive to Prescriptive) tells us the _goal_, these types tell us the _method_.
 
 ---
 
 ## 🔢 1. Quantitative Analysis
+
 Focuses on quantifying the problem by generating numerical data.
-* **Key Tools:** Mean, Median, Standard Deviation, Regression.
-* **Best for:** Measuring ROI, sales growth, or scientific experiments.
+
+- **Key Tools:** Mean, Median, Standard Deviation, Regression.
+- **Best for:** Measuring ROI, sales growth, or scientific experiments.
 
 ## 📝 2. Qualitative Analysis
+
 Focuses on understanding the underlying reasons and motivations.
-* **Key Tools:** Interviews, Focus Groups, Observation.
-* **Best for:** Understanding user experience (UX) or brand perception.
+
+- **Key Tools:** Interviews, Focus Groups, Observation.
+- **Best for:** Understanding user experience (UX) or brand perception.
 
 ## 🕵️ 3. Exploratory Data Analysis (EDA)
+
 An approach to analyzing data sets to summarize their main characteristics, often with visual methods.
-* **Key Tools:** Histograms, Correlation Matrices, Scatter Plots.
-* **Best for:** Finding errors in data and identifying patterns for further study.
+
+- **Key Tools:** Histograms, Correlation Matrices, Scatter Plots.
+- **Best for:** Finding errors in data and identifying patterns for further study.
 
 ## 🎲 4. Inferential Analysis
+
 The process of using data analysis to deduce properties of an underlying probability distribution.
-* **Key Tools:** P-values, Confidence Intervals, Z-tests.
-* **Best for:** Predicting national election results from a sample of 1,000 voters.
+
+- **Key Tools:** P-values, Confidence Intervals, Z-tests.
+- **Best for:** Predicting national election results from a sample of 1,000 voters.
 
 ---
 
 ## Which one should I use?
+
 - [ ] **Need a number for a report?** Use Quantitative.
 - [ ] **Need to know why customers are unhappy?** Use Qualitative.
 - [ ] **Just received a messy dataset?** Use Exploratory.
@@ -929,11 +951,13 @@ In Data Science, we use Descriptive stats to understand our current dataset and 
 ---
 
 ## 📊 Descriptive Statistics
+
 > **"What happened?"**
 
 Descriptive statistics provide a "snapshot" of your data. If you have 100 rows of data, these stats condense them into a few easy-to-read numbers.
 
 ### Key Categories:
+
 1. **Measures of Central Tendency:** Where is the middle? (Mean, Median, Mode).
 2. **Measures of Dispersion:** How spread out is the data? (Range, Standard Deviation).
 3. **Distribution:** What does the shape look like? (Skewness, Kurtosis).
@@ -941,11 +965,13 @@ Descriptive statistics provide a "snapshot" of your data. If you have 100 rows o
 ---
 
 ## 🔮 Inferential Statistics
+
 > **"What does this mean for everyone else?"**
 
 Inferential statistics allow you to test a hypothesis and see if your results are **statistically significant** or just a result of random chance.
 
 ### Key Concepts:
+
 1. **Hypothesis Testing:** Is there a real difference between Group A and Group B?
 2. **Confidence Intervals:** What is the range where the "true" answer likely lives?
 3. **P-Values:** What is the probability that this result happened by pure luck?
@@ -953,6 +979,7 @@ Inferential statistics allow you to test a hypothesis and see if your results ar
 ---
 
 ## The Workflow
+
 1. Collect **Raw Data**.
 2. Run **Descriptive Statistics** to find the mean and check for errors.
 3. Use **Inferential Statistics** to see if your findings apply to the whole population.
@@ -972,28 +999,78 @@ The Abela Chart Chooser is a diagnostic tool to ensure your data visualization m
 To find the right chart, start in the center of the diagram and answer these questions:
 
 ### 1. What is your goal?
-* **Comparison:** Showing differences between values.
-* **Distribution:** Showing the frequency or spread of data.
-* **Composition:** Showing how things break down into parts.
-* **Relationship:** Showing how two or more variables interact.
+
+- **Comparison:** Showing differences between values.
+- **Distribution:** Showing the frequency or spread of data.
+- **Composition:** Showing how things break down into parts.
+- **Relationship:** Showing how two or more variables interact.
 
 ### 2. Is there a Time element?
-* **If Yes:** Use Line or Column charts to show progression.
-* **If No:** Use Bar charts or Scatter plots to show static states.
+
+- **If Yes:** Use Line or Column charts to show progression.
+- **If No:** Use Bar charts or Scatter plots to show static states.
 
 ### 3. How many variables do you have?
-* **1 Variable:** Histogram or Bar chart.
-* **2 Variables:** Scatter Plot.
-* **3 Variables:** Bubble Chart.
+
+- **1 Variable:** Histogram or Bar chart.
+- **2 Variables:** Scatter Plot.
+- **3 Variables:** Bubble Chart.
 
 ---
 
 ## 💡 Key Takeaways
-* **Pie Charts:** Should only be used for simple compositions (shares of a whole). Never use them for comparisons.
-* **Line vs. Bar:** Use Lines for trends (continuous) and Bars for categories (discrete).
-* **Simplicity:** If the chart looks too complex on the diagram, your data might be better presented in a **Table**.
+
+- **Pie Charts:** Should only be used for simple compositions (shares of a whole). Never use them for comparisons.
+- **Line vs. Bar:** Use Lines for trends (continuous) and Bars for categories (discrete).
+- **Simplicity:** If the chart looks too complex on the diagram, your data might be better presented in a **Table**.
 
 ---
-*Source: ExtremePresentation.com*
 
-## Book *Statistics in a Nutshell*, *Practical Statistics for Data Scientists: 50 Essential Concepts Using R and Python Paperback* 
+_Source: ExtremePresentation.com_
+
+## Book _Statistics in a Nutshell_, _Practical Statistics for Data Scientists: 50 Essential Concepts Using R and Python Paperback_
+
+---
+
+# Parametric vs. Non-Parametric Tests
+
+Choosing the right test depends on the distribution of your data and the level of measurement.
+
+## 📉 Parametric Tests
+
+- **Requirements:** Data must be normally distributed (Gaussian).
+- **Metric:** Focuses on the **Mean**.
+- **Advantage:** Higher statistical power (easier to detect an effect).
+- **Common Tests:** T-Tests, ANOVA, Pearson Correlation.
+
+## 📊 Non-Parametric Tests
+
+- **Requirements:** No assumption of normality. Works for skewed data.
+- **Metric:** Focuses on the **Median** or **Ranks**.
+- **Advantage:** Robust against outliers and small sample sizes.
+- **Common Tests:** Mann-Whitney U, Wilcoxon, Kruskal-Wallis, Spearman Correlation.
+
+---
+
+## Decision Flowchart
+
+1. **Is your data continuous?** (Age, Height, Income?)
+   - No → Use **Non-Parametric**.
+2. **Is your data normally distributed?** (Check Shapiro-Wilk test)
+   - No → Use **Non-Parametric**.
+3. **Is your sample size large enough ($n > 30$)?**
+   - Yes → You can often use **Parametric** (Central Limit Theorem).
+   - No → Use **Non-Parametric** to be safe.
+
+---
+
+## Summary Table for Your Analysis
+
+| If you want to...             | Use Parametric if Normal | Use Non-Parametric if Skewed |
+| :---------------------------- | :----------------------- | :--------------------------- |
+| Compare 2 Means               | **Independent T-Test**   | **Mann-Whitney U**           |
+| Compare 2 Means (same people) | **Paired T-Test**        | **Wilcoxon Signed-Rank**     |
+| Compare 3+ Means              | **One-Way ANOVA**        | **Kruskal-Wallis**           |
+| Measure Correlation           | **Pearson Correlation**  | **Spearman’s Rank**          |
+
+---
