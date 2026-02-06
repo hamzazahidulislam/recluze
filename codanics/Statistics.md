@@ -1074,3 +1074,9 @@ Choosing the right test depends on the distribution of your data and the level o
 | Measure Correlation           | **Pearson Correlation**  | **Spearman’s Rank**          |
 
 ---
+
+[ML | Handling Imbalanced Data with SMOTE and Near Miss Algorithm in Python](https://www.geeksforgeeks.org/machine-learning/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/)
+
+---
+[Implementation of KNN classifier using Scikit - learn - Python
+](https://www.geeksforgeeks.org/machine-learning/ml-implementation-of-knn-classifier-using-sklearn/)
