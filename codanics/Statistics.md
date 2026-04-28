@@ -1182,3 +1182,5 @@ if p > 0.05:
 else:
     print("Verdict: The data is Non-Normal.")
 ````
+
+[Video link](https://youtu.be/9jkFZPI5puo?t=30460)
