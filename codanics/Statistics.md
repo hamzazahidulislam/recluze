@@ -1225,3 +1225,7 @@ Understanding where your data comes from is the first step in assessing its reli
 Most successful data science projects use **Triangulation**:
 1. Start with **Secondary Data** to understand the broad landscape.
 2. Collect **Primary Data** to fill the specific gaps identified in the secondary research.
+
+[UCI](https://archive.ics.uci.edu/)
+
+[GOOGLE DATA SET](https://datasetsearch.research.google.com/)
