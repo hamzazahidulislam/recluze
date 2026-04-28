@@ -1078,7 +1078,107 @@ Choosing the right test depends on the distribution of your data and the level o
 [ML | Handling Imbalanced Data with SMOTE and Near Miss Algorithm in Python](https://www.geeksforgeeks.org/machine-learning/ml-handling-imbalanced-data-with-smote-and-near-miss-algorithm-in-python/)
 
 ---
+
 [Implementation of KNN classifier using Scikit - learn - Python
 ](https://www.geeksforgeeks.org/machine-learning/ml-implementation-of-knn-classifier-using-sklearn/)
 
 ## Try to make kurtosis and skewness to near zero or zero
+
+# how to test the normal distribution of the data
+
+# H0: data is normally distributed
+
+#H1: data is not normally distributed
+
+# shpiro wilk
+
+# D'Agostino's K^2 Test
+
+# Anderson-Darling Test
+
+# How to Test for Normal Distribution
+
+A step-by-step workflow for verifying the normality assumption in your dataset.
+
+## 📊 Phase 1: Visual Inspection
+
+Always start here. Statistical tests can be misleading with very large or very small samples.
+
+1. **Histogram:** Check for symmetry and a central peak.
+2. **Box Plot:** Check if the median is in the center and if whiskers are of equal length.
+3. **Q-Q Plot:** Look for data points adhering to the 45-degree reference line.
+
+---
+
+## 🧪 Phase 2: Statistical Testing (The "Big Three")
+
+### 1. Shapiro-Wilk Test
+
+- **Best for:** Small datasets.
+- **Interpretation:** $p > 0.05$ means the data is likely Normal.
+- **Note:** Extremely sensitive; even a tiny "wiggle" in a large dataset will cause it to fail.
+
+### 2. D'Agostino's K^2 Test
+
+- **Best for:** Measuring if the "peak" and "symmetry" are correct.
+- **Pro:** Tells you if the problem is Skewness or Kurtosis.
+
+### 3. Anderson-Darling Test
+
+- **Best for:** Critical data where outliers matter.
+- **Pro:** Provides different critical values for different confidence levels.
+
+---
+
+## 💻 Python Implementation
+
+````python
+from scipy import stats
+import matplotlib.pyplot as plt
+
+# 1. Visual: Q-Q Plot
+stats.probplot(data, plot=plt)
+plt.show()
+
+# 2. Statistical: Shapiro-Wilk
+stat, p = stats.shapiro(data)
+print(f'Shapiro-Wilk: Statistics={stat:.3f}, p={p:.3f}')
+
+# 3. Statistical: D'Agostino's K^2
+stat, p = stats.normaltest(data)
+print(f'DAgostino: Statistics={stat:.3f}, p={p:.3f}')
+
+# Shapiro-Wilk Test
+
+The **Shapiro-Wilk test** is the most widely recommended frequentist test for normality.
+
+## 🛠 How to Use It
+Use this test as a "gatekeeper" before running parametric statistical tests like ANOVA or Linear Regression.
+
+### 🧪 Decision Rule
+* **Null Hypothesis ($H_0$):** The sample belongs to a normal distribution.
+* **Alternative Hypothesis ($H_a$):** The sample does not belong to a normal distribution.
+
+> **Crucial Rule:** If your p-value is **below 0.05**, you must consider using **Non-Parametric** tests instead.
+
+---
+
+## 💻 Python Example (SciPy)
+
+```python
+from scipy.stats import shapiro
+
+# Example dataset
+data = [1.5, 2.3, 2.1, 1.9, 2.8, 1.4, 1.7, 2.0, 2.5, 2.2]
+
+# Run the test
+stat, p = shapiro(data)
+
+print(f'W-Statistic: {stat:.4f}')
+print(f'P-value: {p:.4f}')
+
+if p > 0.05:
+    print("Verdict: The data looks Normal (Gaussian).")
+else:
+    print("Verdict: The data is Non-Normal.")
+````
