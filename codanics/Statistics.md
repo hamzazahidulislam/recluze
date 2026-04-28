@@ -1080,3 +1080,5 @@ Choosing the right test depends on the distribution of your data and the level o
 ---
 [Implementation of KNN classifier using Scikit - learn - Python
 ](https://www.geeksforgeeks.org/machine-learning/ml-implementation-of-knn-classifier-using-sklearn/)
+
+## Try to make kurtosis and skewness to near zero or zero
