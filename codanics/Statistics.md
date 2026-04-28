@@ -1184,3 +1184,5 @@ else:
 ````
 
 [Video link](https://youtu.be/9jkFZPI5puo?t=30460)
+
+[repo link](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/02_distribution.ipynb)
