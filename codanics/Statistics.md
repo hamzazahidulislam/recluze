@@ -1186,3 +1186,42 @@ else:
 [Video link](https://youtu.be/9jkFZPI5puo?t=30460)
 
 [repo link](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/02_distribution.ipynb)
+
+
+# Data Sources: Primary vs. Secondary
+
+Understanding where your data comes from is the first step in assessing its reliability and bias.
+
+## 🟢 Primary Data: The "Custom" Source
+> **"Data gathered at the source for a specific research problem."**
+
+### Pros
+* **Control:** You decide exactly how to measure variables (e.g., specific age brackets).
+* **Proprietary:** The data is unique to you; competitors don't have it.
+* **Accuracy:** You know exactly how the data was handled, reducing "hidden" errors.
+
+### Cons
+* **Logistics:** Requires significant effort in recruitment and management.
+* **Scope:** Usually limited to smaller sample sizes due to costs.
+
+---
+
+## 🔵 Secondary Data: The "Existing" Source
+> **"Data collected by others that you re-purpose for your needs."**
+
+### Pros
+* **Efficiency:** No need to wait for collection; you can start analyzing today.
+* **Breadth:** Access to massive populations (e.g., millions of rows of social media data).
+* **Context:** Provides historical benchmarks to compare your primary data against.
+
+### Cons
+* **Format:** You might have to spend hours re-formatting data that doesn't "fit" your tools.
+* **Bias:** You don't know the original collector's hidden motives or errors.
+* **Aging:** The data might be outdated by the time you access it.
+
+---
+
+## The Hybrid Approach
+Most successful data science projects use **Triangulation**:
+1. Start with **Secondary Data** to understand the broad landscape.
+2. Collect **Primary Data** to fill the specific gaps identified in the secondary research.
