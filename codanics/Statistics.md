@@ -1269,3 +1269,6 @@ To ensure the data is **representative**:
 
 ---
 > **"It is a capital mistake to theorize before one has data."** — Sherlock Holmes
+
+
+[https://codanics.com/best-practices-in-data-collection/](https://codanics.com/best-practices-in-data-collection/)
