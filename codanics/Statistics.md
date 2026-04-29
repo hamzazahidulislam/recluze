@@ -2348,3 +2348,142 @@ else:
 ### **A Quick Note for your Repository:**
 
 If you ever find yourself with **three or more groups** but the data is **Ordinal** (like a 1-5 ranking) instead of **Binary**, you should use the **Friedman Test** instead. Cochran’s Q is specifically the specialist for the 0/1 scenario.
+
+# 📊 The Statistical Test Decision Tree
+
+This guide visualizes the decision process from data preprocessing to selecting the appropriate parametric test based on the study purpose.
+
+---
+
+## 🚦 Phase 1: Data Preprocessing (The Flow)
+
+Before running a test, you must check for **Normality**. The flow below details how to handle the outcome.
+
+| Stage | Path Taken | Statistical Implication | Result |
+| :--- | :--- | :--- | :--- |
+| **Normality Check** | Data IS Normal | Proceed to Parametric Tests. | ✅ **GO** |
+| | Data is NOT Normal | *Transform/Normalize Data.* | ❌ **STOP & REPAIR** |
+| **Normalize Data** | Repair IS Successful | Proceed to Parametric Tests. | ✅ **GO** |
+| | Repair Fails | *You must switch to Non-Parametric Tests.* | ❌ **SWITCH TRACK** |
+
+> **Summary:** Parametric tests are only permissible if the data is naturally normal OR successfully normalized.
+
+---
+
+## 🎯 Phase 2: Purpose-Driven Test Selection
+
+Once you are approved to use **Parametric Tests**, you must select the correct test based on your research **Purpose**.
+
+```mermaid
+graph TD
+    P[Research Purpose] -->|We want to compare groups| COM(Comparison)
+    P -->|We want to find relationships| COR(Correlation/Regression)
+    
+    %% Comparison Branch
+    subgraph "Family 1: Comparison Tests"
+    COM --> T1[1. t-Test]
+    T1 --> T1A[a. One-sample t-test]
+    T1 --> T1B[b. Two-sample t-Test]
+    T1B -->|Comparing Independent Groups| T1BI[i. Un-paired]
+    T1B -->|Comparing Before/After| T1BII[ii. Paired]
+    
+    COM --> A[2. ANOVA]
+    A --> A1[One-way ANOVA]
+    A --> A2[Two-way ANOVA]
+    end
+    
+    %% Correlation Branch
+    subgraph "Family 2: Relationship Tests"
+    COR --> C1[1. Pearson's Correlation]
+    COR --> R1[2. Regression]
+    end
+```
+
+[https://youtu.be/9jkFZPI5puo?t=37887](https://youtu.be/9jkFZPI5puo?t=37887)
+
+![Purpose-Driven](./assets/1.png)
+
+# 🗺️ The Statistical Decision Roadmap
+
+This guide provides a comprehensive path from data cleaning to final test selection, covering both Parametric and Non-Parametric branches.
+
+---
+
+## 🚦 Phase 1: The Normality Decision Tree
+The first step determines which "family" of tests you are allowed to use.
+
+1. **Normality Test** (e.g., Shapiro-Wilk)
+   - **PASS (✅):** Move to **Parametric Tests**.
+   - **FAIL (❌):** Try to **Normalize Data** (e.g., Log/Box-Cox).
+     - **Normalization Success (✅):** Move to **Parametric Tests**.
+     - **Normalization Failure (❌):** Move to **Non-Parametric Tests**.
+
+---
+
+## 🛠️ Phase 2: Test Selection by Purpose
+
+### 🟦 Track A: Parametric Tests (Normal Data)
+*Use these when data is normally distributed and follows parametric assumptions.*
+
+| Purpose | Category | Specific Test |
+| :--- | :--- | :--- |
+| **Comparison** | **t-Test** | **a. One-sample t-test**<br>**b. Two-sample t-Test** (Un-paired & Paired) |
+| | **ANOVA** | **One-way ANOVA**<br>**Two-way ANOVA** |
+| **Correlation** | **Relationship** | **1. Pearson's Correlation**<br>**2. Regression** |
+
+---
+
+### 🟪 Track B: Non-Parametric Tests (Non-Normal Data)
+*Use these when data is skewed, has outliers, or fails normalization.*
+
+| Purpose | Parametric Equivalent | **Non-Parametric Choice** |
+| :--- | :--- | :--- |
+| **Comparison** | One-sample t-Test | **One-Sample Wilcoxon Signed Rank Test** |
+| | Unpaired t-Test | **Mann-Whitney U-Test** |
+| | Paired t-Test | **Wilcoxon Signed Rank Test** |
+| | ANOVA | **Kruskal-Wallis Test** |
+| **Correlation** | Pearson's Correlation | **Spearman's Correlation**<br>**Kendall's Tau** |
+| | Regression | **Non-Parametric Regression** |
+
+---
+
+## 📝 Key Takeaways for the Repository
+
+> [!TIP]
+> **Why Kendall's Tau?** Included in the non-parametric correlation branch, Kendall's Tau is often superior to Spearman's when you have a small sample size or a high number of tied ranks.
+
+> [!IMPORTANT]
+> **The Power Trade-off:** > - **Parametric** tests are more powerful (better at finding real effects).
+> - **Non-Parametric** tests are more robust (harder to "break" with messy data).
+
+---
+*Visual Logic based on the work of Dr. Aammar Tufail.*
+
+# CDCR
+
+# Identifying Variables in Analysis
+
+Before selecting a statistical test from your roadmap, you must identify your variables.
+
+## 🧪 1. Independent Variable (Predictor)
+The variable that stands alone and isn't changed by the other variables you are trying to measure.
+- **Example:** Age, Time, Treatment Dose.
+
+## 🎯 2. Dependent Variable (Outcome)
+The variable that changes based on the independent variable.
+- **Example:** Blood Pressure, Recovery Speed, Sales Revenue.
+
+---
+
+## 🏗️ Visualizing the Relationship
+In a Regression model, we use the formula:
+$$Y = \beta_0 + \beta_1 X + \epsilon$$
+
+Where:
+- $Y$ is your **Dependent Variable**.
+- $X$ is your **Independent Variable**.
+
+---
+
+## ⚠️ A Note on "Extraneous Variables"
+Sometimes a third variable (like the "Weather") can affect your results. These are called **Confounding Variables**. Part of a good study design is trying to keep these constant so they don't mess up the relationship between your IV and DV.
