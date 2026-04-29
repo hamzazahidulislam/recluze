@@ -1187,42 +1187,49 @@ else:
 
 [repo link](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/02_distribution.ipynb)
 
-
 # Data Sources: Primary vs. Secondary
 
 Understanding where your data comes from is the first step in assessing its reliability and bias.
 
 ## 🟢 Primary Data: The "Custom" Source
+
 > **"Data gathered at the source for a specific research problem."**
 
 ### Pros
-* **Control:** You decide exactly how to measure variables (e.g., specific age brackets).
-* **Proprietary:** The data is unique to you; competitors don't have it.
-* **Accuracy:** You know exactly how the data was handled, reducing "hidden" errors.
+
+- **Control:** You decide exactly how to measure variables (e.g., specific age brackets).
+- **Proprietary:** The data is unique to you; competitors don't have it.
+- **Accuracy:** You know exactly how the data was handled, reducing "hidden" errors.
 
 ### Cons
-* **Logistics:** Requires significant effort in recruitment and management.
-* **Scope:** Usually limited to smaller sample sizes due to costs.
+
+- **Logistics:** Requires significant effort in recruitment and management.
+- **Scope:** Usually limited to smaller sample sizes due to costs.
 
 ---
 
 ## 🔵 Secondary Data: The "Existing" Source
+
 > **"Data collected by others that you re-purpose for your needs."**
 
 ### Pros
-* **Efficiency:** No need to wait for collection; you can start analyzing today.
-* **Breadth:** Access to massive populations (e.g., millions of rows of social media data).
-* **Context:** Provides historical benchmarks to compare your primary data against.
+
+- **Efficiency:** No need to wait for collection; you can start analyzing today.
+- **Breadth:** Access to massive populations (e.g., millions of rows of social media data).
+- **Context:** Provides historical benchmarks to compare your primary data against.
 
 ### Cons
-* **Format:** You might have to spend hours re-formatting data that doesn't "fit" your tools.
-* **Bias:** You don't know the original collector's hidden motives or errors.
-* **Aging:** The data might be outdated by the time you access it.
+
+- **Format:** You might have to spend hours re-formatting data that doesn't "fit" your tools.
+- **Bias:** You don't know the original collector's hidden motives or errors.
+- **Aging:** The data might be outdated by the time you access it.
 
 ---
 
 ## The Hybrid Approach
+
 Most successful data science projects use **Triangulation**:
+
 1. Start with **Secondary Data** to understand the broad landscape.
 2. Collect **Primary Data** to fill the specific gaps identified in the secondary research.
 
@@ -1235,6 +1242,7 @@ Most successful data science projects use **Triangulation**:
 A high-quality dataset starts with a rigorous collection plan. Follow these steps to ensure data integrity.
 
 ## ✅ Pre-Collection Checklist
+
 - [ ] **Objective:** Clearly state the research question.
 - [ ] **Data Dictionary:** Define data types, units (e.g., kg vs lbs), and ranges for every field.
 - [ ] **Tool Verification:** Test sensors, scripts, or survey links for bugs.
@@ -1245,30 +1253,382 @@ A high-quality dataset starts with a rigorous collection plan. Follow these step
 ## 🛠 Strategic Guidelines
 
 ### 1. The "Single Source of Truth"
+
 Avoid manual data entry where possible. Use automated logs, API pulls, or digital forms to minimize human "typo" errors.
 
 ### 2. Standardization
-* **Date/Time:** Use ISO 8601 format (`YYYY-MM-DD`).
-* **Categorical Data:** Use drop-down menus rather than open text fields to avoid variations like "USA", "U.S.A.", and "United States".
+
+- **Date/Time:** Use ISO 8601 format (`YYYY-MM-DD`).
+- **Categorical Data:** Use drop-down menus rather than open text fields to avoid variations like "USA", "U.S.A.", and "United States".
 
 ### 3. Sampling Integrity
+
 To ensure the data is **representative**:
-* Use **Random Sampling** to avoid selection bias.
-* Monitor your sample size to ensure it has enough **Statistical Power** to detect effects.
+
+- Use **Random Sampling** to avoid selection bias.
+- Monitor your sample size to ensure it has enough **Statistical Power** to detect effects.
 
 ---
 
 ## 📊 Summary Table: Quality Control
 
-| Practice | Purpose | Example |
-| :--- | :--- | :--- |
-| **Validation** | Prevent "Garbage In" | Rejecting a "Birth Year" of 2050. |
-| **Standardization** | Consistency | Using `Celsius` for all temperature entries. |
-| **Audit Trails** | Traceability | Tracking who modified a record and when. |
-| **Anonymization** | Privacy | Replacing names with unique ID numbers. |
+| Practice            | Purpose              | Example                                      |
+| :------------------ | :------------------- | :------------------------------------------- |
+| **Validation**      | Prevent "Garbage In" | Rejecting a "Birth Year" of 2050.            |
+| **Standardization** | Consistency          | Using `Celsius` for all temperature entries. |
+| **Audit Trails**    | Traceability         | Tracking who modified a record and when.     |
+| **Anonymization**   | Privacy              | Replacing names with unique ID numbers.      |
 
 ---
+
 > **"It is a capital mistake to theorize before one has data."** — Sherlock Holmes
 
-
 [https://codanics.com/best-practices-in-data-collection/](https://codanics.com/best-practices-in-data-collection/)
+
+# Representative vs. Non-Representative Sampling
+
+This document outlines the core differences in sample quality and how they impact analytical conclusions.
+
+## ✅ Representative Sampling
+
+> **"A small-scale version of the whole."**
+
+- **Definition:** A subset of a population that accurately reflects the members of the entire group.
+- **Key Tool:** **Randomization**. This ensures that every individual has an equal chance of being picked, removing human bias.
+- **Usage:** Used in medical trials, national polling, and market sizing where accuracy is non-negotiable.
+
+## ❌ Non-Representative Sampling
+
+> **"A biased or specific subset."**
+
+- **Definition:** A sample that does not reflect the diversity of the population.
+- **Common Pitfall:** **Under-coverage Bias** (leaving out specific groups, like people without internet access).
+- **Usage:** Used for "Proof of Concept" tests, pilot studies, or qualitative interviews where you need specific depth rather than broad width.
+
+---
+
+## The "Bias" Check
+
+To determine if your sample is representative, ask:
+
+1. Did everyone in the population have a chance to be picked?
+2. Does the sample's "Mean" and "Standard Deviation" closely align with known population data?
+3. Was the sample chosen based on convenience (e.g., the first 10 people you saw)?
+
+---
+
+# Skewness: Positive vs. Negative
+
+Skewness is a measure of the asymmetry of the probability distribution of a real-valued random variable.
+
+## 📈 Positive Skew (Right-Skewed)
+
+The distribution is concentrated on the left, with the tail stretching to the right.
+
+- **Formulaic Sign:** $\text{Skewness} > 0$
+- **Visual:** The "hump" is on the left.
+- **Relationship:** **Mean > Median > Mode**
+- **Example:** Age of death in a developing country (many die young, few live to be very old).
+
+---
+
+## 📉 Negative Skew (Left-Skewed)
+
+The distribution is concentrated on the right, with the tail stretching to the left.
+
+- **Formulaic Sign:** $\text{Skewness} < 0$
+- **Visual:** The "hump" is on the right.
+- **Relationship:** **Mean < Median < Mode**
+- **Example:** Retirement age (most people retire in their 60s, very few retire in their 20s or 30s).
+
+---
+
+## Why does Skewness matter for Analysis?
+
+1. **Test Selection:** Many parametric tests (like the T-test) assume a skewness of 0 (Normality).
+2. **Data Transformation:** If data is highly skewed, you may need to apply a **Log Transformation** or **Square Root Transformation** to "normalize" it before analysis.
+3. **Choice of Average:** In skewed data, the **Median** is usually a better representation of the "typical" value than the Mean, because the Mean is influenced by the outliers in the tail.
+
+# Representative Sampling Strategies
+
+To make valid statistical inferences, researchers must use methods that provide a miniature, unbiased version of the population.
+
+## 🎲 1. Simple Random Sampling
+
+- **Mechanism:** Random Number Generator / Lottery.
+- **Advantage:** Eliminates selection bias entirely.
+- **Limitation:** Requires a "Sampling Frame" (a list of every single member).
+
+## 📊 2. Stratified Sampling
+
+- **Mechanism:** Divide into Strata -> Sample Randomly from each.
+- **Advantage:** Guarantees that small subgroups are not "swamped" or ignored.
+- **Key Note:** The sample proportions should match the population proportions.
+
+## 📏 3. Systematic Sampling
+
+- **Mechanism:** Select every $n^{th}$ unit after a random start.
+- **Advantage:** Very simple to implement in the field.
+- **Risk:** "Periodicity" (patterns in the list that align with the interval).
+
+## 🏘️ 4. Cluster Sampling
+
+- **Mechanism:** Randomly select groups (clusters) rather than individuals.
+- **Advantage:** Greatly reduces travel and administrative costs.
+- **Risk:** High "Sampling Error" if the clusters are not diverse enough.
+
+---
+
+## Comparison of Methods
+
+| Method            | Focus            | Bias Risk |
+| :---------------- | :--------------- | :-------- |
+| **Simple Random** | Individual       | Lowest    |
+| **Stratified**    | Sub-groups       | Very Low  |
+| **Systematic**    | Process/Interval | Moderate  |
+| **Cluster**       | Geography/Area   | High      |
+
+# Representative Sampling Strategies
+
+To make valid statistical inferences, researchers must use methods that provide a miniature, unbiased version of the population.
+
+## 🎲 1. Simple Random Sampling
+
+- **Mechanism:** Random Number Generator / Lottery.
+- **Advantage:** Eliminates selection bias entirely.
+- **Limitation:** Requires a "Sampling Frame" (a list of every single member).
+
+## 📊 2. Stratified Sampling
+
+- **Mechanism:** Divide into Strata -> Sample Randomly from each.
+- **Advantage:** Guarantees that small subgroups are not "swamped" or ignored.
+- **Key Note:** The sample proportions should match the population proportions.
+
+## 📏 3. Systematic Sampling
+
+- **Mechanism:** Select every $n^{th}$ unit after a random start.
+- **Advantage:** Very simple to implement in the field.
+- **Risk:** "Periodicity" (patterns in the list that align with the interval).
+
+## 🏘️ 4. Cluster Sampling
+
+- **Mechanism:** Randomly select groups (clusters) rather than individuals.
+- **Advantage:** Greatly reduces travel and administrative costs.
+- **Risk:** High "Sampling Error" if the clusters are not diverse enough.
+
+---
+
+## Comparison of Methods
+
+| Method            | Focus            | Bias Risk |
+| :---------------- | :--------------- | :-------- |
+| **Simple Random** | Individual       | Lowest    |
+| **Stratified**    | Sub-groups       | Very Low  |
+| **Systematic**    | Process/Interval | Moderate  |
+| **Cluster**       | Geography/Area   | High      |
+
+# Non-Representative (Non-Probability) Sampling
+
+These strategies are used when random selection is impossible, too expensive, or not necessary for the research goals.
+
+## 🚶 1. Convenience Sampling
+
+- **Mechanism:** Ease of access.
+- **Advantage:** Fast, inexpensive, and requires no planning.
+- **Limitation:** Highly biased; cannot be used to describe a whole population.
+
+## 📣 2. Voluntary Response Sampling
+
+- **Mechanism:** Self-selection.
+- **Advantage:** Low effort for the researcher.
+- **Risk:** "Strong Opinion Bias"—results are skewed by those who feel most intensely.
+
+## 🎯 3. Purposive Sampling
+
+- **Mechanism:** Researcher's judgment.
+- **Advantage:** Targets "Information-Rich" cases (experts).
+- **Usage:** Qualitative research and niche case studies.
+
+## ❄️ 4. Snowball Sampling
+
+- **Mechanism:** Referrals.
+- **Advantage:** The only way to reach "hidden" or marginalized populations.
+- **Risk:** Very low diversity; the sample stays within one social circle.
+
+## 📊 5. Quota Sampling
+
+- **Mechanism:** Fixed numbers for categories (but non-random).
+- **Advantage:** Ensures all subgroups are represented in the sample.
+- **Note:** While it looks representative, the lack of randomness still introduces bias.
+
+---
+
+## When to go Non-Representative?
+
+| Situation                         | Recommended Method |
+| :-------------------------------- | :----------------- |
+| **Testing a new survey for bugs** | Convenience        |
+| **Understanding a rare disease**  | Snowball           |
+| **Interviewing industry leaders** | Purposive          |
+| **Quick feedback on a TV show**   | Voluntary Response |
+
+# Sampling Methods: Probability vs. Non-Probability
+
+This document defines the two overarching categories of sampling in statistics and data science.
+
+---
+
+## 🎲 1. Probability Sampling
+
+> **"Every member has a fair shot."**
+
+This method is the foundation of scientific research. If you want to predict an election or test a new medicine, you **must** use this.
+
+### Common Methods:
+
+- **Simple Random:** The "Lottery" method.
+- **Stratified:** Dividing into groups (Age, Gender) then sampling randomly.
+- **Systematic:** Picking every $n^{th}$ person.
+- **Cluster:** Sampling whole geographic areas at once.
+
+---
+
+## 🚶 2. Non-Probability Sampling
+
+> **"Selection based on ease or intent."**
+
+This is used when you don't have a list of the whole population or when you are in the early "brainstorming" phase of a project.
+
+### Common Methods:
+
+- **Convenience:** "Whoever is available right now."
+- **Voluntary Response:** "Whoever wants to join."
+- **Purposive:** "Experts only."
+- **Snowball:** "Referrals from friends."
+
+---
+
+## Technical Summary
+
+| Aspect                | Probability                  | Non-Probability               |
+| :-------------------- | :--------------------------- | :---------------------------- |
+| **Generalizability**  | Can generalize to population | Only describes the sample     |
+| **Statistical Tests** | Best for Parametric Tests    | Best for Non-Parametric Tests |
+| **Inference**         | High confidence              | Low confidence                |
+
+---
+
+[https://codanics.com/chapter-2-the-art-of-choosing-the-right-sample/](https://codanics.com/chapter-2-the-art-of-choosing-the-right-sample/)
+
+[https://youtu.be/9jkFZPI5puo?t=34631](https://youtu.be/9jkFZPI5puo?t=34631)
+
+# Descriptive vs. Inferential Statistics
+
+This file breaks down the two main branches of statistical analysis.
+
+## 📊 Descriptive Analysis
+> **"What happened?"**
+This is the process of using data to provide a summary of a dataset.
+
+### Core Metrics:
+1. **Frequency:** How often a value occurs.
+2. **Central Tendency:** The "center" of the data (Mean, Median, Mode).
+3. **Variation:** How spread out the data is (Standard Deviation, Range).
+
+---
+
+## 🔮 Inferential Statistics
+> **"What does this mean for the future/everyone?"**
+This allows you to make predictions or test if a result is "statistically significant" or just a lucky fluke.
+
+### Core Concepts:
+1. **Hypothesis Testing:** Testing a specific claim (e.g., "This drug works").
+2. **Confidence Intervals:** A range of values that likely contains the true population mean.
+3. **P-Value:** The probability that your results happened by pure chance.
+
+---
+
+## The Workflow in Practice
+1. **Collect Data.**
+2. **Run Descriptive Analysis:** Check the mean and look for errors/outliers.
+3. **Run Inferential Statistics:** Determine if the findings are significant enough to apply to the whole world.
+
+# Z-Test vs. T-Test
+
+These are both "Parametric Tests" used to compare the mean of a sample to a population mean or another sample.
+
+## 📏 1. The Z-Test
+Used for large samples where the population parameters are known.
+
+**Formula:**
+$$Z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}}$$
+
+* $\bar{x}$: Sample Mean
+* $\mu$: Population Mean
+* $\sigma$: Population Standard Deviation
+* $n$: Sample Size
+
+---
+
+## 🧪 2. The T-Test
+Used for smaller samples or when the population standard deviation is unknown (which is most common).
+
+**Formula:**
+$$t = \frac{\bar{x} - \mu}{s / \sqrt{n}}$$
+
+* $s$: Sample Standard Deviation
+
+### Types of T-Tests:
+1.  **One-Sample T-test:** Compare a sample mean against a known value.
+2.  **Independent Two-Sample T-test:** Compare the means of two different groups (e.g., Boys vs. Girls).
+3.  **Paired T-test:** Compare means from the same group at different times (e.g., Before vs. After treatment).
+
+---
+
+## Decision Flowchart
+1.  **Is the Population Variance Known?**
+    * Yes → **Z-Test**
+    * No → Go to step 2
+2.  **Is the Sample Size > 30?**
+    * Yes → **Z-Test** (or T-test, as they converge at large $n$)
+    * No → **T-Test**
+
+# Types of Hypotheses in Statistics
+
+A hypothesis is a testable statement. In data science, we formalize these into specific types to run statistical tests.
+
+## ⚖️ 1. The Statistical Duo
+
+| Hypothesis | Symbol | Definition |
+| :--- | :--- | :--- |
+| **Null** | $H_0$ | The assumption of "no difference" or "no effect." |
+| **Alternative** | $H_a$ | The claim that there is a significant effect or relationship. |
+
+### Example:
+* **$H_0$:** The new website design does not affect sales.
+* **$H_a$:** The new website design increases sales.
+
+---
+
+## 🧭 2. Directionality
+
+### One-Tailed (Directional)
+Used when you are only interested in one direction of change.
+* **$H_a$:** $\mu > \text{value}$ or $\mu < \text{value}$
+* **Visual:** The "Rejection Region" is entirely in one tail of the distribution.
+
+### Two-Tailed (Non-Directional)
+Used when any difference (higher or lower) is important.
+* **$H_a$:** $\mu \neq \text{value}$
+* **Visual:** The "Rejection Region" is split between both tails.
+
+---
+
+## 🛠 3. The Hypothesis Testing Workflow
+1. **State $H_0$ and $H_a$** clearly.
+2. **Choose a Significance Level ($\alpha$):** Usually 0.05 (5%).
+3. **Collect Data** and calculate a Test Statistic (like a T-score).
+4. **Determine the P-value:** * If $P < \alpha$ → **Reject $H_0$** (Significant result).
+   * If $P \geq \alpha$ → **Fail to Reject $H_0$** (Not enough evidence).
+
+---
