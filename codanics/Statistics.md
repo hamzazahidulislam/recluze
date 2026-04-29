@@ -2487,3 +2487,28 @@ Where:
 
 ## ⚠️ A Note on "Extraneous Variables"
 Sometimes a third variable (like the "Weather") can affect your results. These are called **Confounding Variables**. Part of a good study design is trying to keep these constant so they don't mess up the relationship between your IV and DV.
+
+# Intro to Inferential Statistics
+
+Inferential statistics take data from a sample and make generalizations about a population.
+
+## 🛠️ The Process
+1. **Define the Null Hypothesis ($H_0$):** "There is no effect/difference."
+2. **Define the Alternative Hypothesis ($H_1$):** "There is an effect/difference."
+3. **Set Alpha ($\alpha$):** Usually 0.05 (the risk of being wrong).
+4. **Collect Data & Run a Test:** (e.g., T-test, ANOVA).
+5. **Interpret the P-value:** - If $p \leq 0.05$: Reject $H_0$ (Significant).
+   - If $p > 0.05$: Fail to reject $H_0$ (Not significant).
+
+---
+
+## 🎯 Common Tools
+- **Confidence Intervals (CI):** A range of values (e.g., 95%) where we are confident the true population mean lies.
+- **T-tests:** Comparing means.
+- **Chi-Square:** Comparing proportions.
+- **Regression:** Predicting outcomes.
+
+---
+
+## ⚠️ The "Sampling Error"
+No sample is perfect. Inferential statistics always account for **Sampling Error**, which is the naturally occurring difference between a sample and the population.
