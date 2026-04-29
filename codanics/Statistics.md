@@ -1527,10 +1527,12 @@ This is used when you don't have a list of the whole population or when you are 
 This file breaks down the two main branches of statistical analysis.
 
 ## 📊 Descriptive Analysis
+
 > **"What happened?"**
-This is the process of using data to provide a summary of a dataset.
+> This is the process of using data to provide a summary of a dataset.
 
 ### Core Metrics:
+
 1. **Frequency:** How often a value occurs.
 2. **Central Tendency:** The "center" of the data (Mean, Median, Mode).
 3. **Variation:** How spread out the data is (Standard Deviation, Range).
@@ -1538,10 +1540,12 @@ This is the process of using data to provide a summary of a dataset.
 ---
 
 ## 🔮 Inferential Statistics
+
 > **"What does this mean for the future/everyone?"**
-This allows you to make predictions or test if a result is "statistically significant" or just a lucky fluke.
+> This allows you to make predictions or test if a result is "statistically significant" or just a lucky fluke.
 
 ### Core Concepts:
+
 1. **Hypothesis Testing:** Testing a specific claim (e.g., "This drug works").
 2. **Confidence Intervals:** A range of values that likely contains the true population mean.
 3. **P-Value:** The probability that your results happened by pure chance.
@@ -1549,6 +1553,7 @@ This allows you to make predictions or test if a result is "statistically signif
 ---
 
 ## The Workflow in Practice
+
 1. **Collect Data.**
 2. **Run Descriptive Analysis:** Check the mean and look for errors/outliers.
 3. **Run Inferential Statistics:** Determine if the findings are significant enough to apply to the whole world.
@@ -1558,27 +1563,30 @@ This allows you to make predictions or test if a result is "statistically signif
 These are both "Parametric Tests" used to compare the mean of a sample to a population mean or another sample.
 
 ## 📏 1. The Z-Test
+
 Used for large samples where the population parameters are known.
 
 **Formula:**
 $$Z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}}$$
 
-* $\bar{x}$: Sample Mean
-* $\mu$: Population Mean
-* $\sigma$: Population Standard Deviation
-* $n$: Sample Size
+- $\bar{x}$: Sample Mean
+- $\mu$: Population Mean
+- $\sigma$: Population Standard Deviation
+- $n$: Sample Size
 
 ---
 
 ## 🧪 2. The T-Test
+
 Used for smaller samples or when the population standard deviation is unknown (which is most common).
 
 **Formula:**
 $$t = \frac{\bar{x} - \mu}{s / \sqrt{n}}$$
 
-* $s$: Sample Standard Deviation
+- $s$: Sample Standard Deviation
 
 ### Types of T-Tests:
+
 1.  **One-Sample T-test:** Compare a sample mean against a known value.
 2.  **Independent Two-Sample T-test:** Compare the means of two different groups (e.g., Boys vs. Girls).
 3.  **Paired T-test:** Compare means from the same group at different times (e.g., Before vs. After treatment).
@@ -1586,12 +1594,13 @@ $$t = \frac{\bar{x} - \mu}{s / \sqrt{n}}$$
 ---
 
 ## Decision Flowchart
+
 1.  **Is the Population Variance Known?**
-    * Yes → **Z-Test**
-    * No → Go to step 2
+    - Yes → **Z-Test**
+    - No → Go to step 2
 2.  **Is the Sample Size > 30?**
-    * Yes → **Z-Test** (or T-test, as they converge at large $n$)
-    * No → **T-Test**
+    - Yes → **Z-Test** (or T-test, as they converge at large $n$)
+    - No → **T-Test**
 
 # Types of Hypotheses in Statistics
 
@@ -1599,36 +1608,743 @@ A hypothesis is a testable statement. In data science, we formalize these into s
 
 ## ⚖️ 1. The Statistical Duo
 
-| Hypothesis | Symbol | Definition |
-| :--- | :--- | :--- |
-| **Null** | $H_0$ | The assumption of "no difference" or "no effect." |
-| **Alternative** | $H_a$ | The claim that there is a significant effect or relationship. |
+| Hypothesis      | Symbol | Definition                                                    |
+| :-------------- | :----- | :------------------------------------------------------------ |
+| **Null**        | $H_0$  | The assumption of "no difference" or "no effect."             |
+| **Alternative** | $H_a$  | The claim that there is a significant effect or relationship. |
 
 ### Example:
-* **$H_0$:** The new website design does not affect sales.
-* **$H_a$:** The new website design increases sales.
+
+- **$H_0$:** The new website design does not affect sales.
+- **$H_a$:** The new website design increases sales.
 
 ---
 
 ## 🧭 2. Directionality
 
 ### One-Tailed (Directional)
+
 Used when you are only interested in one direction of change.
-* **$H_a$:** $\mu > \text{value}$ or $\mu < \text{value}$
-* **Visual:** The "Rejection Region" is entirely in one tail of the distribution.
+
+- **$H_a$:** $\mu > \text{value}$ or $\mu < \text{value}$
+- **Visual:** The "Rejection Region" is entirely in one tail of the distribution.
 
 ### Two-Tailed (Non-Directional)
+
 Used when any difference (higher or lower) is important.
-* **$H_a$:** $\mu \neq \text{value}$
-* **Visual:** The "Rejection Region" is split between both tails.
+
+- **$H_a$:** $\mu \neq \text{value}$
+- **Visual:** The "Rejection Region" is split between both tails.
 
 ---
 
 ## 🛠 3. The Hypothesis Testing Workflow
+
 1. **State $H_0$ and $H_a$** clearly.
 2. **Choose a Significance Level ($\alpha$):** Usually 0.05 (5%).
 3. **Collect Data** and calculate a Test Statistic (like a T-score).
-4. **Determine the P-value:** * If $P < \alpha$ → **Reject $H_0$** (Significant result).
-   * If $P \geq \alpha$ → **Fail to Reject $H_0$** (Not enough evidence).
+4. **Determine the P-value:** \* If $P < \alpha$ → **Reject $H_0$** (Significant result).
+   - If $P \geq \alpha$ → **Fail to Reject $H_0$** (Not enough evidence).
 
 ---
+
+### 🔬 Technical Nuance: Why Shapiro-Wilk Wins
+
+The **Shapiro-Wilk** test is more "powerful" because it was mathematically optimized specifically for the properties of a normal curve.
+
+The **Kolmogorov-Smirnov** test is a "distribution-free" test. While it can be adapted for normality (often called the **Lilliefors test** when the mean/variance are unknown), it still generally requires a much larger sample size to reach the same level of confidence as Shapiro-Wilk.
+
+#### ⚠️ Warning for your Repository:
+
+- **Large Samples:** Both tests will almost always "fail" (give $p < 0.05$) on very large datasets because real-world data is never 100% perfectly normal.
+- **Recommendation:** For $n > 1000$, always prioritize a **Q-Q Plot** over these mathematical tests.
+
+# Levene’s Test for Homogeneity of Variance
+
+Levene’s test is used to check if the variance among different samples is equal. This is a core assumption for many parametric statistical procedures.
+
+## 🛠 Why use Levene's over Bartlett's?
+
+- **Bartlett's Test:** Only works if the data is perfectly Normal. If your data is even slightly skewed, Bartlett’s will give a false error.
+- **Levene's Test:** Remains accurate even when data deviates from normality.
+
+---
+
+## ⚖️ Statistical Decision
+
+- **Null Hypothesis ($H_0$):** All input populations have equal variances.
+- **Alternative Hypothesis ($H_a$):** At least one pair of populations has unequal variances.
+
+> **Rule of Thumb:** If Levene's test "fails" ($p < 0.05$), do NOT use a standard Student's T-test. Use **Welch's T-test** instead, which does not assume equal variance.
+
+---
+
+## 💻 Python Implementation (SciPy)
+
+```python
+from scipy.stats import levene
+
+# Group A and Group B data
+group1 = [12, 15, 14, 15, 12, 18, 19]
+group2 = [22, 24, 25, 26, 28, 21, 20]
+
+# Run Levene's Test
+stat, p = levene(group1, group2)
+
+print(f'Levene Statistic: {stat:.4f}, p-value: {p:.4f}')
+
+if p > 0.05:
+    print("Assumption Met: Variances are homogeneous.")
+else:
+    print("Assumption Failed: Variances are unequal.")
+
+```
+
+# Defining the Purpose of Analysis
+
+Before selecting a tool or a test, you must define the "Purpose." This ensures that the math matches the mission.
+
+## 🧭 The Visualization Purpose
+
+_Derived from Dr. Andrew Abela's Chart Chooser_
+
+1. **Comparison:** Are you showing how Group A differs from Group B?
+2. **Relationship:** Are you showing how Variable X changes when Variable Y moves?
+3. **Distribution:** Are you showing the frequency of occurrences?
+4. **Composition:** Are you showing the "ingredients" of a total sum?
+
+---
+
+## 🔬 The Analytical Purpose
+
+_The Four Pillars of Data Science_
+
+| Type             | Level      | Goal                             |
+| :--------------- | :--------- | :------------------------------- |
+| **Descriptive**  | 🟢 Low     | To summarize and describe.       |
+| **Diagnostic**   | 🟡 Medium  | To find correlations and causes. |
+| **Predictive**   | 🟠 High    | To forecast future outcomes.     |
+| **Prescriptive** | 🔴 Extreme | To provide actionable solutions. |
+
+---
+
+## 🛠 Quick Decision Guide
+
+- **If you want to simplify:** Use **Descriptive** charts (Bar/Pie).
+- **If you want to prove a point:** Use **Inferential** tests (T-test/ANOVA).
+- **If you want to see a trend:** Use **Relationship** visuals (Scatter/Line).
+
+# The Path from Connection to Prediction
+
+Understanding the depth of a relationship is vital to avoid making false claims in data science.
+
+## 🔗 1. Connection & Correlation
+
+While a **connection** is an observation, **correlation** is the math behind it.
+
+- **Positive Correlation:** Both move up together.
+- **Negative Correlation:** One moves up, the other moves down.
+- **Zero Correlation:** No relationship at all.
+
+## 🎯 2. Causation: The "Gold Standard"
+
+To move from correlation to causation, you must satisfy three criteria:
+
+1. **Temporal Precedence:** The cause must happen before the effect.
+2. **Covariation:** The variables must show a mathematical correlation.
+3. **Non-Spuriousness:** There are no "hidden" third variables causing the change.
+
+## 🔮 3. Prediction: The Output
+
+Once a relationship is established, we build models to forecast.
+
+- **Independent Variable ($X$):** The predictor.
+- **Dependent Variable ($Y$):** The outcome we are trying to guess.
+
+---
+
+### ⚠️ The "Spurious Correlation" Warning
+
+Just because two things are correlated does not mean they are connected.
+_Example:_ There is a high correlation between **Ice Cream sales** and **Shark attacks**.
+_The Truth:_ **Weather** (heat) causes both. It is a connection, but not causation.
+
+# Fundamental Data Types
+
+Selecting the correct data type is the first step in Exploratory Data Analysis (EDA).
+
+## 🏷️ Categorical (Qualitative)
+
+1. **Nominal:** Data with no inherent order.
+   - _Analysis:_ Mode, Frequency.
+2. **Ordinal:** Data with a logical rank or order.
+   - _Analysis:_ Median, Mode, Percentiles.
+
+---
+
+## 🔢 Numerical (Quantitative)
+
+1. **Discrete:** Distinct, separate values (whole numbers).
+   - _Analysis:_ Mean, Median, Mode, Standard Deviation.
+2. **Continuous:** Infinite values within a range (decimals).
+   - _Analysis:_ Mean, Median, Regression, T-tests.
+
+---
+
+## 🧪 Statistical Mapping
+
+- **Nominal/Ordinal Data:** Use **Non-Parametric Tests** (Chi-Square, Mann-Whitney).
+- **Discrete/Continuous Data:** Use **Parametric Tests** if normally distributed (T-test, ANOVA).
+
+# The Four Families of Statistical Tests
+
+To choose the right test, first identify which "Family" your question belongs to.
+
+## 1. Comparison Tests (Differences)
+
+- **T-test:** 1 or 2 groups.
+- **ANOVA:** 3+ groups.
+- **Key Assumption:** Data should be normally distributed.
+
+## 2. Association Tests (Connections)
+
+- **Pearson Correlation:** For continuous data.
+- **Spearman Correlation:** For ordinal/ranked data.
+- **Chi-Square:** For categorical data.
+
+## 3. Prediction Tests (Regression)
+
+- **Linear:** Predicting a number (e.g., Price).
+- **Logistic:** Predicting a category (e.g., Spam vs. Not Spam).
+
+## 4. Non-Parametric Tests (The Alternatives)
+
+Use these when your data is **skewed** or your sample size is **very small**.
+
+- **Mann-Whitney U** (instead of T-test).
+- **Kruskal-Wallis** (instead of ANOVA).
+
+# What to do when Assumptions Fail
+
+Statistical assumptions are guidelines, not absolute walls. Here is the protocol for handling violations.
+
+## 🛠️ Step 1: Identify the Violation
+
+- **Fails Normality?** (Shapiro-Wilk $p < 0.05$)
+- **Fails Homogeneity?** (Levene's $p < 0.05$)
+
+## 🔄 Step 2: Choose a Remedy
+
+### Option A: Data Transformation
+
+Apply a mathematical function to every data point to stabilize variance or normalize distribution.
+
+- **Log:** `np.log(df['column'])`
+- **Square Root:** `np.sqrt(df['column'])`
+
+### Option B: Use Non-Parametric Alternatives
+
+These tests make fewer assumptions and are "distribution-free."
+
+- **Use Mann-Whitney U** if you have two independent groups.
+- **Use Kruskal-Wallis** if you have three or more groups.
+
+### Option C: Use Robust Estimators
+
+- **Welch’s T-test:** Use this by default if variances are unequal.
+- **Bootstrapping:** Resample your data thousands of times to create your own distribution (highly reliable for any data shape).
+
+---
+
+## 🚦 Decision Matrix
+
+| Assumption Violated | Best First Step      | Backup Plan          |
+| :------------------ | :------------------- | :------------------- |
+| **Normality**       | Transformation (Log) | Non-Parametric Test  |
+| **Homogeneity**     | Welch's T-test       | Non-Parametric Test  |
+| **Independence**    | Check Study Design   | Mixed Effects Models |
+
+# Data Preprocessing: Min-Max Scaling
+
+Min-Max Scaling is the process of re-scaling a feature to a fixed range of [0, 1].
+
+## 🧮 Mathematical Formula
+
+For every value $x$ in a feature:
+$$x' = \frac{x - \min(x)}{\max(x) - \min(x)}$$
+
+## ✅ Pros
+
+- Preserves the relative relationships between data points.
+- Essential for algorithms that do not assume a distribution (Neural Networks, KNN).
+- Very easy to interpret (0% to 100% of the range).
+
+## ❌ Cons
+
+- **Outlier Sensitivity:** If you have one value that is 1,000,000 and the rest are under 10, all your "normal" data will be squashed to 0.00001.
+- Does not handle skewed data as well as Log Transformations.
+
+## 💻 Python Implementation (Scikit-Learn)
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+
+data = np.array([[10], [20], [30], [40], [50]])
+
+scaler = MinMaxScaler()
+scaled_data = scaler.fit_transform(data)
+
+print(scaled_data)
+# Output will be [[0.], [0.25], [0.5], [0.75], [1.]]
+
+```
+
+# Data Preprocessing: Standardization (Z-Score)
+
+Standardization transforms features to have a mean of zero and a variance of one.
+
+## 🧮 The Z-Score Formula
+
+For each value $x$:
+$$z = \frac{x - \mu}{\sigma}$$
+
+Where:
+
+- $\mu$ = Mean of the feature
+- $\sigma$ = Standard Deviation of the feature
+
+## ✅ When to use it?
+
+1. **When your data follows a Normal Distribution:** It perfectly aligns with the properties of the Bell Curve.
+2. **When using PCA:** Principal Component Analysis requires features to be centered to find the directions of maximum variance.
+3. **When you have outliers:** It prevents extreme values from dictating the scale of the entire dataset.
+
+## 💻 Python Implementation (Scikit-Learn)
+
+```python
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+# Sample data: Ages of 5 people
+data = np.array([[20], [30], [40], [50], [60]])
+
+scaler = StandardScaler()
+standardized_data = scaler.fit_transform(data)
+
+print(f"Mean: {standardized_data.mean()}") # Should be 0
+print(f"Std Dev: {standardized_data.std()}") # Should be 1
+
+```
+
+# Non-Parametric Alternatives
+
+Use these tests when your data is skewed, contains outliers, or consists of Ordinal (ranked) data.
+
+## ⚖️ Why go Non-Parametric?
+
+1. **No Normality Requirement:** You don't need a bell curve.
+2. **Robust to Outliers:** Since they use ranks, a value of `1,000,000` is just "Rank #10," the same as if it were `100`.
+3. **Works with Ordinal Data:** Perfect for Likert scales (Strongly Agree to Strongly Disagree).
+
+---
+
+## 🛠️ The Replacement Map
+
+### 1. Two Independent Groups
+
+- **Parametric:** Independent T-test
+- **Non-Parametric:** **Mann-Whitney U Test**
+- _Python:_ `scipy.stats.mannwhitneyu(group1, group2)`
+
+### 2. Three or More Groups
+
+- **Parametric:** One-way ANOVA
+- **Non-Parametric:** **Kruskal-Wallis H-test**
+- _Python:_ `scipy.stats.kruskal(group1, group2, group3)`
+
+### 3. Correlation
+
+- **Parametric:** Pearson Correlation ($r$)
+- **Non-Parametric:** **Spearman Rank Correlation** ($\rho$)
+- _Python:_ `scipy.stats.spearmanr(x, y)`
+
+---
+
+## ⚠️ The Trade-off: Statistical Power
+
+Non-parametric tests are generally **less powerful** than parametric tests.
+
+- If the data _is_ actually normal, a T-test is better at finding a real difference.
+- Non-parametric tests require **larger sample sizes** to reach the same level of confidence.
+
+# ANOVA: Analysis of Variance
+
+ANOVA determines if the "between-group" variance is significantly larger than the "within-group" variance.
+
+## 🧱 The Null Hypothesis ($H_0$)
+
+> "All group means are equal." ($\mu_1 = \mu_2 = \mu_3$)
+
+## 🚩 The "Omnibus" Nature of ANOVA
+
+ANOVA is an **omnibus test**, meaning it tells you _that_ a difference exists, but it doesn't tell you _where_.
+
+- If $p < 0.05$, you must run a **Post-Hoc Test** (like **Tukey’s HSD**) to find out exactly which groups differ.
+
+---
+
+## 🛠️ Types at a Glance
+
+### 1. One-Way ANOVA
+
+- **Use:** One categorical IV, one continuous DV.
+- **Example:** Does the brand of coffee affect alertness levels?
+
+### 2. Two-Way ANOVA
+
+- **Use:** Two categorical IVs, one continuous DV.
+- **Example:** Does coffee brand AND time of day affect alertness?
+
+### 3. Repeated Measures
+
+- **Use:** Same subjects over multiple conditions.
+- **Example:** Testing alertness at 8 AM, 12 PM, and 4 PM.
+
+---
+
+## 🧪 Post-Hoc Tests (The "Follow-up")
+
+If your ANOVA is significant, you use these to find the specific differences:
+
+1. **Tukey’s HSD:** The standard for comparing all pairs.
+2. **Bonferroni:** More conservative (prevents Type I errors).
+3. **Scheffe:** The most flexible but least powerful.
+
+# Reliability Test: Cronbach's Alpha ($\alpha$)
+
+Cronbach’s Alpha is the "Gold Standard" for checking if a set of scale items (like a 1-5 Likert scale) is consistent.
+
+## 🧮 Interpretation Guide
+
+- **$\alpha \geq 0.9$**: Excellent (but check for redundant questions).
+- **$0.7 \leq \alpha < 0.9$**: Good/Acceptable (Standard for research).
+- **$0.6 \leq \alpha < 0.7$**: Questionable/Poor.
+- **$\alpha < 0.5$**: Unacceptable.
+
+---
+
+## 💻 Python Implementation (Pingouin Library)
+
+```python
+import pingouin as pg
+import pandas as pd
+
+# Sample Survey Data (Items 1-4)
+data = pd.DataFrame({
+    'Q1': [5, 4, 4, 5, 2],
+    'Q2': [4, 4, 3, 4, 2],
+    'Q3': [5, 3, 4, 5, 1],
+    'Q4': [4, 5, 4, 4, 2]
+})
+
+# Calculate Cronbach's Alpha
+alpha = pg.cronbach_alpha(data=data)
+
+print(f"Cronbach's Alpha: {alpha[0]:.4f}")
+
+```
+
+# Validity in Data Research
+
+Validity ensures that the conclusions drawn from a dataset represent the real world accurately.
+
+## 🏹 The 4-Type Checklist
+
+### 1. Content Validity
+
+- **Focus:** Domain coverage.
+- **Check:** Did I include all relevant sub-topics?
+
+### 2. Criterion Validity
+
+- **Focus:** Performance against a standard.
+- **Sub-types:** - _Concurrent:_ Matches current standards.
+  - _Predictive:_ Predicts future results.
+
+### 3. Construct Validity
+
+- **Focus:** The "Big Picture" concept.
+- **Goal:** Ensuring an "Intelligence Test" isn't accidentally just a "Reading Speed Test."
+
+### 4. Internal vs. External Validity
+
+- **Internal:** Are the results caused by the independent variable, or was it a fluke? (Control).
+- **External:** Can these results be applied to the real world? (Generalizability).
+
+---
+
+## 📊 How to "Test" Validity?
+
+Unlike Cronbach's Alpha for Reliability, Validity is often tested via:
+
+- **Correlation Analysis:** Checking if your results correlate with "Gold Standard" tests.
+- **Factor Analysis:** A statistical method used to see if your questions truly group together under the "Construct" you intended.
+
+# Advanced Inter-Rater Reliability
+
+When you have more than two people labeling your data, Cohen's Kappa is no longer sufficient. Use these advanced metrics instead.
+
+## 👥 1. Fleiss’s Kappa
+
+Best for simple categorical labeling with multiple raters.
+
+- **Interpretation:** - < 0: Poor agreement
+  - 0.41 – 0.60: Moderate agreement
+  - 0.81 – 1.00: Almost perfect agreement
+
+## 🧬 2. Krippendorff’s Alpha
+
+The most versatile reliability coefficient available.
+
+- **Why use it?** It handles missing data perfectly. If "Rater A" skipped item #5 but "Rater B" and "C" finished it, Alpha can still calculate the reliability.
+- **Rule of Thumb:** - $\alpha \geq 0.800$: Reliable
+  - $0.667 \leq \alpha < 0.800$: Tentative conclusions
+  - $\alpha < 0.667$: Unreliable
+
+---
+
+## 💻 Python Implementation (using `simpledorff` or `statsmodels`)
+
+````python
+# For Fleiss Kappa
+from statsmodels.stats.inter_rater import fleiss_kappa
+
+# For Krippendorff Alpha
+import simpledorff
+
+# Example Data: 5 items, 3 raters
+# Raters' scores for each item
+data = [
+    [1, 1, 1],
+    [1, 2, 1],
+    [2, 2, 2],
+    [1, 1, 1],
+    [2, 1, 2]
+]
+
+# Calculate Fleiss Kappa
+# (Note: requires converting data to a 'table' format of counts per category)
+# kappa = fleiss_kappa(table)
+
+In research and data science, a **Reliability Test** measures the **consistency** of a metric. While "Validity" asks if you are measuring the right thing, "Reliability" asks: *If I do this again, will I get the same result?*
+
+In your repository, you should categorize reliability into four main types depending on what you are testing.
+
+---
+
+## 1. Internal Consistency (Cronbach’s Alpha)
+This is the most common reliability test used in surveys and psychometrics. It checks if different items on the same test measure the same thing.
+* **The Logic:** If you are testing "Anxiety," and you ask 10 different questions about it, a person's answers should be consistent across all 10.
+* **The Metric:** **Cronbach’s Alpha ($\alpha$)**.
+    * **$> 0.70$:** Acceptable.
+    * **$> 0.90$:** Excellent.
+    * **$< 0.50$:** Unreliable (the questions aren't related).
+
+## 2. Test-Retest Reliability
+This measures stability over time.
+* **The Logic:** If you take an IQ test today and again in two weeks, the scores should be nearly identical.
+* **The Test:** You calculate the **Correlation Coefficient ($r$)** between the scores from Time 1 and Time 2.
+
+## 3. Inter-Rater Reliability
+This measures consistency between different people (observers).
+* **The Logic:** If two different doctors evaluate the same patient’s X-ray, they should ideally come to the same conclusion.
+* **The Test:** **Cohen’s Kappa ($\kappa$)** is the standard for categorical data.
+
+## 4. Parallel Forms Reliability
+This measures consistency between two different versions of the same test.
+* **The Logic:** If "Test A" and "Test B" are designed to be equal, a student should get the same score regardless of which version they sit for.
+
+---
+
+## 5. Comparison Table: `reliability_types.md`
+
+| Type | What it checks | Example |
+| :--- | :--- | :--- |
+| **Internal Consistency** | Are the survey questions related? | Cronbach's Alpha on a personality quiz. |
+| **Test-Retest** | Is the score stable over time? | Taking a weight measurement twice. |
+| **Inter-Rater** | Do different observers agree? | Two judges scoring a gymnastics routine. |
+| **Parallel Forms** | Are different versions equivalent? | Form A and Form B of an English exam. |
+
+---
+
+## 6. Markdown File: `cronbachs_alpha.md`
+
+```markdown
+# Reliability Test: Cronbach's Alpha ($\alpha$)
+
+Cronbach’s Alpha is the "Gold Standard" for checking if a set of scale items (like a 1-5 Likert scale) is consistent.
+
+## 🧮 Interpretation Guide
+- **$\alpha \geq 0.9$**: Excellent (but check for redundant questions).
+- **$0.7 \leq \alpha < 0.9$**: Good/Acceptable (Standard for research).
+- **$0.6 \leq \alpha < 0.7$**: Questionable/Poor.
+- **$\alpha < 0.5$**: Unacceptable.
+
+---
+
+## 💻 Python Implementation (Pingouin Library)
+
+```python
+import pingouin as pg
+import pandas as pd
+
+# Sample Survey Data (Items 1-4)
+data = pd.DataFrame({
+    'Q1': [5, 4, 4, 5, 2],
+    'Q2': [4, 4, 3, 4, 2],
+    'Q3': [5, 3, 4, 5, 1],
+    'Q4': [4, 5, 4, 4, 2]
+})
+
+# Calculate Cronbach's Alpha
+alpha = pg.cronbach_alpha(data=data)
+
+print(f"Cronbach's Alpha: {alpha[0]:.4f}")
+````
+
+---
+
+## ⚠️ Important Note
+
+High reliability **does not** mean the data is accurate (Valid).
+
+- A scale that is incorrectly calibrated by +5kg is **Reliable** (it gives the same weight every time) but **not Valid** (the weight is wrong).
+
+```
+
+```
+
+---
+
+# Tips
+
+### **Strategic Advice for your Project:**
+
+As you move toward leaving your current role and potentially entering a new data-focused position, being able to explain **Cronbach's Alpha** or **Inter-Rater Reliability** is a huge plus, especially in fields like Market Research, HR Analytics, or User Experience (UX).
+
+**Would you like to see a "Validity vs. Reliability" diagram to add to your documentation?**
+
+### **A Quick Note for your Career Transition:**
+
+In high-stakes environments—like labeling data for an **AI Model** or **Medical Research**—knowing how to calculate **Krippendorff’s Alpha** is a major technical differentiator. It shows you understand how to handle "messy" real-world data where raters might disagree or miss entries.
+
+**Would you like to see how to format the "Count Table" required for Fleiss's Kappa in Python?**
+
+# Sample Size Computation
+
+A guide for determining how many participants are needed for a statistically valid study.
+
+## 📊 1. Descriptive Surveys (Cochran’s Formula)
+
+Use this for estimating a population proportion.
+
+| Confidence Level | Z-score |
+| :--------------- | :------ |
+| 90%              | 1.645   |
+| 95%              | 1.96    |
+| 99%              | 2.576   |
+
+**Formula:**
+$$n = \frac{Z^2 p(1-p)}{e^2}$$
+
+---
+
+## 📉 2. Finite Population Correction (FPC)
+
+If your calculated sample size ($n_0$) is more than 5% of your total population ($N$), adjust it:
+$$n = \frac{n_0}{1 + \frac{n_0 - 1}{N}}$$
+
+---
+
+## 🧪 3. Power Analysis (Experimental)
+
+When testing a hypothesis (e.g., T-test), use **Power Analysis** to avoid a "Null" result due to small sample size.
+
+- **Alpha ($\alpha$):** Risk of false positive (Type I error).
+- **Beta ($\beta$):** Risk of false negative (Type II error).
+- **Power:** $1 - \beta$ (Standard is 0.8).
+
+## 💻 Python Example (Statsmodels)
+
+```python
+from statsmodels.stats.power import TTestIndPower
+
+# Parameters
+effect_size = 0.5  # Cohen's d (Medium effect)
+alpha = 0.05
+power = 0.8
+
+analysis = TTestIndPower()
+sample_size = analysis.solve_power(effect_size=effect_size,
+                                   power=power,
+                                   alpha=alpha,
+                                   ratio=1.0)
+
+print(f"Required Sample Size per Group: {sample_size:.2f}")
+
+```
+
+---
+
+### **Strategic Insight for your Repository**
+
+As you move into a more professional data environment, "Power Analysis" is often more respected than simple formulas. It shows you aren't just counting heads, but are ensuring the experiment is mathematically "powerful" enough to find the truth.
+
+**Since you're documenting this, would you like to see the "Effect Size" chart (Cohen's d)? It helps you decide if you're looking for a "Small," "Medium," or "Large" difference in your data.**
+
+# Cochran’s Q Test
+
+Cochran’s Q is an extension of the McNemar test used for comparing three or more matched sets of binary frequencies or proportions.
+
+## 📐 Assumptions
+
+1. **Matched Samples:** The subjects must be the same across all conditions.
+2. **Dichotomous Outcome:** The dependent variable must be binary (e.g., Yes/No, 0/1).
+3. **Independence:** The blocks (subjects) are independent of each other.
+
+## 🧮 The Result
+
+If the test returns a $p < 0.05$, you reject the null hypothesis. However, like ANOVA, Cochran's Q is an **omnibus test**. It doesn't tell you _which_ group is different—only that a difference exists.
+
+> **Follow-up:** If significant, run a **Post-hoc McNemar test** with a Bonferroni correction to find the specific differences.
+
+## 💻 Python Implementation (Statsmodels)
+
+```python
+from statsmodels.stats.contingency_tables import cochrans_q
+import pandas as pd
+
+# Rows = Different People, Columns = Different Conditions
+data = pd.DataFrame({
+    'Condition_A': [1, 0, 1, 1, 0],
+    'Condition_B': [0, 0, 1, 0, 0],
+    'Condition_C': [1, 1, 1, 1, 0]
+})
+
+# Run the test
+result = cochrans_q(data)
+
+print(f'Q-statistic: {result.statistic:.4f}')
+print(f'p-value: {result.pvalue:.4f}')
+
+if result.pvalue < 0.05:
+    print("Significant difference found between conditions.")
+else:
+    print("No significant difference found.")
+
+```
+
+### **A Quick Note for your Repository:**
+
+If you ever find yourself with **three or more groups** but the data is **Ordinal** (like a 1-5 ranking) instead of **Binary**, you should use the **Friedman Test** instead. Cochran’s Q is specifically the specialist for the 0/1 scenario.
