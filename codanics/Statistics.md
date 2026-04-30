@@ -2637,17 +2637,22 @@ print(f"Standard Error (Precision): {se:.2f}")
 You only run these tests if your ANOVA result is significant ($p < 0.05$).
 
 ## ⚖️ The Multiple Comparison Problem
+
 If you perform 10 separate T-tests at a 5% significance level, your chance of at least one "False Positive" rises to about 40%. Post-hoc tests (like Tukey's) correct for this.
 
 ## 🛠️ Most Common: Tukey's Honestly Significant Difference (HSD)
+
 Tukey's HSD compares all possible pairs of means while controlling the family-wise error rate.
 
 ### How to interpret results:
+
 Look for the **"Adjusted P-value"** column in your output.
+
 - If **p-adj < 0.05**: The two specific groups are significantly different.
 - If **p-adj > 0.05**: The groups are statistically the same, even if their means look different.
 
 ## 💻 Python Example (using Statsmodels)
+
 ```python
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
@@ -2658,3 +2663,9 @@ data = {'score': [85, 88, 90, 70, 72, 75, 95, 92, 98],
 # Perform Tukey HSD
 m_comp = pairwise_tukeyhsd(endog=data['score'], groups=data['group'], alpha=0.05)
 print(m_comp)
+
+```
+
+[https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/04_anova.ipynb](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/04_anova.ipynb)
+
+[https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/05_manova.ipynb](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/05_manova.ipynb)
