@@ -2359,12 +2359,12 @@ This guide visualizes the decision process from data preprocessing to selecting 
 
 Before running a test, you must check for **Normality**. The flow below details how to handle the outcome.
 
-| Stage | Path Taken | Statistical Implication | Result |
-| :--- | :--- | :--- | :--- |
-| **Normality Check** | Data IS Normal | Proceed to Parametric Tests. | ✅ **GO** |
-| | Data is NOT Normal | *Transform/Normalize Data.* | ❌ **STOP & REPAIR** |
-| **Normalize Data** | Repair IS Successful | Proceed to Parametric Tests. | ✅ **GO** |
-| | Repair Fails | *You must switch to Non-Parametric Tests.* | ❌ **SWITCH TRACK** |
+| Stage               | Path Taken           | Statistical Implication                    | Result               |
+| :------------------ | :------------------- | :----------------------------------------- | :------------------- |
+| **Normality Check** | Data IS Normal       | Proceed to Parametric Tests.               | ✅ **GO**            |
+|                     | Data is NOT Normal   | _Transform/Normalize Data._                | ❌ **STOP & REPAIR** |
+| **Normalize Data**  | Repair IS Successful | Proceed to Parametric Tests.               | ✅ **GO**            |
+|                     | Repair Fails         | _You must switch to Non-Parametric Tests._ | ❌ **SWITCH TRACK**  |
 
 > **Summary:** Parametric tests are only permissible if the data is naturally normal OR successfully normalized.
 
@@ -2378,7 +2378,7 @@ Once you are approved to use **Parametric Tests**, you must select the correct t
 graph TD
     P[Research Purpose] -->|We want to compare groups| COM(Comparison)
     P -->|We want to find relationships| COR(Correlation/Regression)
-    
+
     %% Comparison Branch
     subgraph "Family 1: Comparison Tests"
     COM --> T1[1. t-Test]
@@ -2386,12 +2386,12 @@ graph TD
     T1 --> T1B[b. Two-sample t-Test]
     T1B -->|Comparing Independent Groups| T1BI[i. Un-paired]
     T1B -->|Comparing Before/After| T1BII[ii. Paired]
-    
+
     COM --> A[2. ANOVA]
     A --> A1[One-way ANOVA]
     A --> A2[Two-way ANOVA]
     end
-    
+
     %% Correlation Branch
     subgraph "Family 2: Relationship Tests"
     COR --> C1[1. Pearson's Correlation]
@@ -2410,6 +2410,7 @@ This guide provides a comprehensive path from data cleaning to final test select
 ---
 
 ## 🚦 Phase 1: The Normality Decision Tree
+
 The first step determines which "family" of tests you are allowed to use.
 
 1. **Normality Test** (e.g., Shapiro-Wilk)
@@ -2423,27 +2424,29 @@ The first step determines which "family" of tests you are allowed to use.
 ## 🛠️ Phase 2: Test Selection by Purpose
 
 ### 🟦 Track A: Parametric Tests (Normal Data)
-*Use these when data is normally distributed and follows parametric assumptions.*
 
-| Purpose | Category | Specific Test |
-| :--- | :--- | :--- |
-| **Comparison** | **t-Test** | **a. One-sample t-test**<br>**b. Two-sample t-Test** (Un-paired & Paired) |
-| | **ANOVA** | **One-way ANOVA**<br>**Two-way ANOVA** |
-| **Correlation** | **Relationship** | **1. Pearson's Correlation**<br>**2. Regression** |
+_Use these when data is normally distributed and follows parametric assumptions._
+
+| Purpose         | Category         | Specific Test                                                             |
+| :-------------- | :--------------- | :------------------------------------------------------------------------ |
+| **Comparison**  | **t-Test**       | **a. One-sample t-test**<br>**b. Two-sample t-Test** (Un-paired & Paired) |
+|                 | **ANOVA**        | **One-way ANOVA**<br>**Two-way ANOVA**                                    |
+| **Correlation** | **Relationship** | **1. Pearson's Correlation**<br>**2. Regression**                         |
 
 ---
 
 ### 🟪 Track B: Non-Parametric Tests (Non-Normal Data)
-*Use these when data is skewed, has outliers, or fails normalization.*
 
-| Purpose | Parametric Equivalent | **Non-Parametric Choice** |
-| :--- | :--- | :--- |
-| **Comparison** | One-sample t-Test | **One-Sample Wilcoxon Signed Rank Test** |
-| | Unpaired t-Test | **Mann-Whitney U-Test** |
-| | Paired t-Test | **Wilcoxon Signed Rank Test** |
-| | ANOVA | **Kruskal-Wallis Test** |
+_Use these when data is skewed, has outliers, or fails normalization._
+
+| Purpose         | Parametric Equivalent | **Non-Parametric Choice**                       |
+| :-------------- | :-------------------- | :---------------------------------------------- |
+| **Comparison**  | One-sample t-Test     | **One-Sample Wilcoxon Signed Rank Test**        |
+|                 | Unpaired t-Test       | **Mann-Whitney U-Test**                         |
+|                 | Paired t-Test         | **Wilcoxon Signed Rank Test**                   |
+|                 | ANOVA                 | **Kruskal-Wallis Test**                         |
 | **Correlation** | Pearson's Correlation | **Spearman's Correlation**<br>**Kendall's Tau** |
-| | Regression | **Non-Parametric Regression** |
+|                 | Regression            | **Non-Parametric Regression**                   |
 
 ---
 
@@ -2454,10 +2457,12 @@ The first step determines which "family" of tests you are allowed to use.
 
 > [!IMPORTANT]
 > **The Power Trade-off:** > - **Parametric** tests are more powerful (better at finding real effects).
+>
 > - **Non-Parametric** tests are more robust (harder to "break" with messy data).
 
 ---
-*Visual Logic based on the work of Dr. Aammar Tufail.*
+
+_Visual Logic based on the work of Dr. Aammar Tufail._
 
 # CDCR
 
@@ -2466,26 +2471,33 @@ The first step determines which "family" of tests you are allowed to use.
 Before selecting a statistical test from your roadmap, you must identify your variables.
 
 ## 🧪 1. Independent Variable (Predictor)
+
 The variable that stands alone and isn't changed by the other variables you are trying to measure.
+
 - **Example:** Age, Time, Treatment Dose.
 
 ## 🎯 2. Dependent Variable (Outcome)
+
 The variable that changes based on the independent variable.
+
 - **Example:** Blood Pressure, Recovery Speed, Sales Revenue.
 
 ---
 
 ## 🏗️ Visualizing the Relationship
+
 In a Regression model, we use the formula:
 $$Y = \beta_0 + \beta_1 X + \epsilon$$
 
 Where:
+
 - $Y$ is your **Dependent Variable**.
 - $X$ is your **Independent Variable**.
 
 ---
 
 ## ⚠️ A Note on "Extraneous Variables"
+
 Sometimes a third variable (like the "Weather") can affect your results. These are called **Confounding Variables**. Part of a good study design is trying to keep these constant so they don't mess up the relationship between your IV and DV.
 
 # Intro to Inferential Statistics
@@ -2493,6 +2505,7 @@ Sometimes a third variable (like the "Weather") can affect your results. These a
 Inferential statistics take data from a sample and make generalizations about a population.
 
 ## 🛠️ The Process
+
 1. **Define the Null Hypothesis ($H_0$):** "There is no effect/difference."
 2. **Define the Alternative Hypothesis ($H_1$):** "There is an effect/difference."
 3. **Set Alpha ($\alpha$):** Usually 0.05 (the risk of being wrong).
@@ -2503,6 +2516,7 @@ Inferential statistics take data from a sample and make generalizations about a 
 ---
 
 ## 🎯 Common Tools
+
 - **Confidence Intervals (CI):** A range of values (e.g., 95%) where we are confident the true population mean lies.
 - **T-tests:** Comparing means.
 - **Chi-Square:** Comparing proportions.
@@ -2511,4 +2525,136 @@ Inferential statistics take data from a sample and make generalizations about a 
 ---
 
 ## ⚠️ The "Sampling Error"
+
 No sample is perfect. Inferential statistics always account for **Sampling Error**, which is the naturally occurring difference between a sample and the population.
+
+# Logic of Hypothesis Testing
+
+In any statistical test, we are essentially testing the **Null Hypothesis**.
+
+## ⚖️ The Courtroom Analogy
+
+- **The Null ($H_0$):** The defendant is **innocent**.
+- **The Alternative ($H_a$):** The defendant is **guilty**.
+- **The Evidence:** Your collected data.
+
+We never "prove" the defendant is innocent ($H_0$); we only decide if there is **enough evidence** to prove they are guilty ($H_a$). If the evidence is weak ($p > 0.05$), the defendant goes free (we "Fail to Reject" the Null).
+
+## 🚀 One-Tailed vs. Two-Tailed
+
+- **Two-Tailed:** We just want to know if there is **any** difference.
+  - $H_a: \mu_1 \neq \mu_2$
+- **One-Tailed:** We are predicting a **specific direction** (higher or lower).
+  - $H_a: \mu_1 > \mu_2$
+
+[https://youtu.be/9jkFZPI5puo?t=40513](https://youtu.be/9jkFZPI5puo?t=40513)
+
+# Understanding Confidence Intervals (CI)
+
+A CI provides an estimated range of values which is likely to include an unknown population parameter.
+
+## 🧮 The General Formula
+
+$$CI = \text{Point Estimate} \pm (\text{Critical Value} \times \text{Standard Error})$$
+
+- **Point Estimate:** Your sample mean ($\bar{x}$).
+- **Critical Value:** Based on your confidence level ($Z=1.96$ for 95%).
+- **Standard Error:** How much the sample mean varies ($s / \sqrt{n}$).
+
+## 📏 Factors that Affect the Width
+
+1. **Sample Size ($n$):** Larger samples = Narrower (better) intervals.
+2. **Variability ($s$):** More "noise" in data = Wider intervals.
+3. **Confidence Level:** Higher confidence (e.g., 99%) = Wider intervals.
+
+## 💻 Python Implementation (using Scipy)
+
+```python
+import numpy as np
+import scipy.stats as st
+
+data = [12, 15, 18, 14, 16, 19, 13, 17]
+
+# Create 95% confidence interval
+interval = st.t.interval(confidence=0.95,
+                         df=len(data)-1,
+                         loc=np.mean(data),
+                         scale=st.sem(data))
+
+print(f"95% Confidence Interval: {interval}")
+
+```
+
+---
+
+## 5. The Link to Hypothesis Testing
+
+Confidence Intervals and **P-values** are two sides of the same coin:
+
+- If your 95% CI **does not** include the "Null" value (usually 0), your result is **statistically significant** ($p < 0.05$).
+- It’s often better to report a CI than just a P-value because the CI shows the **magnitude** of the effect, not just that it exists.
+
+# SD vs. SE: Why the difference matters
+
+Understanding these two metrics is the key to moving from "Describing" data to "Predicting" with it.
+
+## 🧮 The Mathematical Relationship
+
+Standard Error is just the Standard Deviation adjusted for the sample size:
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+
+### 💡 The "Large Sample" Effect
+
+Imagine you measure the height of 5 people. Your **SD** might be 10cm. Your **SE** will be roughly 4.47.
+Now, measure 1,000 people. Your **SD** will still be around 10cm (the diversity of humans hasn't changed), but your **SE** drops to 0.31.
+
+**Conclusion:** You are now much more "certain" about the true average height than you were before.
+
+---
+
+## 💻 Python Visualization Snippet
+
+```python
+import numpy as np
+
+data = [10, 12, 14, 13, 15, 11, 12, 13]
+
+sd = np.std(data, ddof=1)
+se = sd / np.sqrt(len(data))
+
+print(f"Standard Deviation (Spread): {sd:.2f}")
+print(f"Standard Error (Precision): {se:.2f}")
+```
+
+[Confidence Interval](https://youtu.be/9jkFZPI5puo?t=40941)
+
+[https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/03_statistical_tests.ipynb](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/03_statistical_tests.ipynb)
+
+## Post-hoc test
+
+# Post-hoc Analysis: The "Follow-up"
+
+You only run these tests if your ANOVA result is significant ($p < 0.05$).
+
+## ⚖️ The Multiple Comparison Problem
+If you perform 10 separate T-tests at a 5% significance level, your chance of at least one "False Positive" rises to about 40%. Post-hoc tests (like Tukey's) correct for this.
+
+## 🛠️ Most Common: Tukey's Honestly Significant Difference (HSD)
+Tukey's HSD compares all possible pairs of means while controlling the family-wise error rate.
+
+### How to interpret results:
+Look for the **"Adjusted P-value"** column in your output.
+- If **p-adj < 0.05**: The two specific groups are significantly different.
+- If **p-adj > 0.05**: The groups are statistically the same, even if their means look different.
+
+## 💻 Python Example (using Statsmodels)
+```python
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+# Example: Scores from 3 different study methods
+data = {'score': [85, 88, 90, 70, 72, 75, 95, 92, 98],
+        'group': ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C']}
+
+# Perform Tukey HSD
+m_comp = pairwise_tukeyhsd(endog=data['score'], groups=data['group'], alpha=0.05)
+print(m_comp)
