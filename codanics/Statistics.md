@@ -2673,3 +2673,6 @@ print(m_comp)
 [https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/06_correlation.ipynb](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/06_correlation.ipynb)
 
 [https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/07_case_study.ipynb](https://github.com/hamzazahidulislam/six-months_python_for_data_science-mentorship-program/blob/main/06_statistics/07_case_study.ipynb)
+
+
+[book](https://codanics.com/books/abc-of-statistics-for-data-science/)
